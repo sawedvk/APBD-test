@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Style for "rectangle_" -->
+    <!-- Add this snippet to layer-list xml in drawable. -->
+    <item android:width="159dp" android:height="109dp">
+        <shape android:shape="rectangle">
+            <stroke android:width="1dp" android:color="#1a000000" />
+            <corners android:radius="20dp" />
+            <solid android:color="#fffcfcfc" />
+            <item android:name="android:shadowColor">#40000000</item>
+            <!-- TextView shadow offsets do not respect scale. -->
+            <item android:name="android:shadowDx">0</item>
+            <item android:name="android:shadowDy">4</item>
+        </shape>
+    </item>
+</layer-list>

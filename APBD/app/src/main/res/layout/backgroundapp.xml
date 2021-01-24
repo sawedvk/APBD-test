@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:showIn="@layout/Home" >
+
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Style for "background" -->
+    <!-- Add this snippet to layer-list xml in drawable. -->
+    <item android:width="411dp" android:height="823dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#ff06d6a0" />
+        </shape>
+    </item>
+    <!-- Style for "rectangle_" -->
+    <!-- Add this snippet to layer-list xml in drawable. -->
+    <item android:width="99dp" android:height="99dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="20dp" />
+            <solid android:color="#fffcfcfc" />
+        </shape>
+    </item>
+</layer-list>
+
+</FrameLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="overlay_cop" type="id" />
+    <item name="planning" type="id" />
+    <item name="rectangle_9" type="id" />
+</resources>

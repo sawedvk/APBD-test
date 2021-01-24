@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#06D6A0">
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="127dp"
+        android:layout_height="36dp"
+        android:backgroundTint="#fcfcfc"
+        android:text="Expenses"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        tools:cornerRadius="20"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="315dp" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="127dp"
+        android:layout_height="36dp"
+        android:backgroundTint="#fcfcfc"
+        android:text="income"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        tools:cornerRadius="20"
+        tools:layout_editor_absoluteX="244dp"
+        tools:layout_editor_absoluteY="315dp" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="127dp"
+        android:layout_height="24dp"
+        android:text="Rp 310.000,-"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        tools:fontFamily="@font/roboto_bold"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="281dp"
+        tools:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="127dp"
+        android:layout_height="25dp"
+        android:text="Rp 1.000.000,-"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        tools:fontFamily="@font/roboto_bold"
+        tools:layout_editor_absoluteX="244dp"
+        tools:layout_editor_absoluteY="281dp"
+        tools:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Transactions :"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        tools:fontFamily="@font/roboto_bold"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="246dp" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="413dp"
+        android:layout_height="79dp"
+        android:background="@drawable/rectangle"
+        android:backgroundTint="#FFD166"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="155dp" />
+
+    <EditText
+        android:id="@+id/editTextDate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/roboto_bold"
+        android:inputType="date"
+        android:text="Desember 2020"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        tools:layout_editor_absoluteX="103dp"
+        tools:layout_editor_absoluteY="171dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        app:srcCompat="@drawable/previous"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="171dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        app:srcCompat="@drawable/next"
+        tools:layout_editor_absoluteX="343dp"
+        tools:layout_editor_absoluteY="170dp" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="419dp"
+        android:layout_height="369dp"
+        android:background="@drawable/box"
+        tools:layout_editor_absoluteX="-4dp"
+        tools:layout_editor_absoluteY="365dp" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/menu"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="551dp" />
+
+    <TextView
+        android:id="@+id/textView42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tickets"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        tools:fontFamily="@font/roboto_bold"
+        tools:layout_editor_absoluteX="128dp"
+        tools:layout_editor_absoluteY="563dp" />
+
+    <TextView
+        android:id="@+id/textView43"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3-12-2020"
+        android:textColor="@android:color/black"
+        android:textSize="8sp"
+        tools:fontFamily="@font/roboto"
+        tools:layout_editor_absoluteX="128dp"
+        tools:layout_editor_absoluteY="590dp" />
+
+    <TextView
+        android:id="@+id/textView44"
+        android:layout_width="127dp"
+        android:layout_height="24dp"
+        android:text="Rp 80.000,-"
+        android:textColor="#FF0000"
+        android:textSize="18sp"
+        tools:fontFamily="@font/roboto_bold"
+        tools:layout_editor_absoluteX="243dp"
+        tools:layout_editor_absoluteY="577dp"
+        tools:textAlignment="center" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/icon"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="563dp" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/menu"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="468dp" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/icon"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="480dp" />
+
+    <TextView
+        android:id="@+id/textView37"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1-12-2020"
+        android:textColor="@android:color/black"
+        android:textSize="8sp"
+        tools:fontFamily="@font/roboto"
+        tools:layout_editor_absoluteX="128dp"
+        tools:layout_editor_absoluteY="507dp" />
+
+    <TextView
+        android:id="@+id/textView35"
+        android:layout_width="127dp"
+        android:layout_height="24dp"
+        android:text="Rp 60.000,-"
+        android:textColor="#FF0000"
+        android:textSize="18sp"
+        tools:fontFamily="@font/roboto_bold"
+        tools:layout_editor_absoluteX="243dp"
+        tools:layout_editor_absoluteY="494dp"
+        tools:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Food"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        tools:fontFamily="@font/roboto_bold"
+        tools:layout_editor_absoluteX="128dp"
+        tools:layout_editor_absoluteY="480dp" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="415dp"
+        android:layout_height="79dp"
+        android:background="@drawable/rectangle"
+        android:backgroundTint="#26547C"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="655dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        app:srcCompat="@drawable/homeicon"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="667dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        app:srcCompat="@drawable/planicon"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="664dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        app:srcCompat="@drawable/newtransaction"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="662dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        app:srcCompat="@drawable/historyicon"
+        tools:layout_editor_absoluteX="265dp"
+        tools:layout_editor_absoluteY="664dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        app:srcCompat="@drawable/settingsicon"
+        tools:layout_editor_absoluteX="333dp"
+        tools:layout_editor_absoluteY="662dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/menu"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="385dp" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1-12-2020"
+        android:textColor="@android:color/black"
+        android:textSize="8sp"
+        tools:fontFamily="@font/roboto"
+        tools:layout_editor_absoluteX="129dp"
+        tools:layout_editor_absoluteY="424dp" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Netflix"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        tools:fontFamily="@font/roboto_bold"
+        tools:layout_editor_absoluteX="129dp"
+        tools:layout_editor_absoluteY="397dp" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="127dp"
+        android:layout_height="24dp"
+        android:text="Rp 170.000,-"
+        android:textColor="#FF0000"
+        android:textSize="18sp"
+        tools:fontFamily="@font/roboto_bold"
+        tools:layout_editor_absoluteX="244dp"
+        tools:layout_editor_absoluteY="411dp"
+        tools:textAlignment="center" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/icon"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="397dp" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="120dp"
+        android:layout_height="39dp"
+        app:srcCompat="@drawable/history"
+        tools:layout_editor_absoluteX="145dp"
+        tools:layout_editor_absoluteY="86dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        app:srcCompat="?android:attr/actionModeWebSearchDrawable"
+        tools:layout_editor_absoluteX="347dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        app:srcCompat="?attr/actionModeCloseDrawable"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
