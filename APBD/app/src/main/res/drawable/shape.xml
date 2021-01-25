@@ -9,7 +9,7 @@
             android:width="120px"
             android:color="#FFFFFF" />
 
-        <corners android:radius="dp" />
+        <corners android:radius="2dp" />
 
     </shape>
 

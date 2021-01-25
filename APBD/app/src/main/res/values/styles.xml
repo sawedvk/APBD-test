@@ -133,14 +133,6 @@
         </item>
     </style>
 
-    <style name="planning">
-            <stroke android:width="2dp" android:color="#80fb8f67" />
-            <item name="android:textColor">#fffcfcfc</item>
-            <item name="android:textSize">32sp</item>
-            <item name="android:textAlignment">center</item>
-            <item name="android:text">Planning</item>
-    </style>
-
     <style name="icon2">
         <item name="android:textSize">
             36sp
@@ -151,5 +143,4 @@
         </item>
     </style>
 
-</resources>
 </resources>

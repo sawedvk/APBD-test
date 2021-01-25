@@ -157,10 +157,10 @@
 
     <ImageView
         android:id="@+id/imageView14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="65dp"
+        android:layout_height="57dp"
         app:srcCompat="@drawable/icon"
-        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteX="47dp"
         tools:layout_editor_absoluteY="563dp" />
 
     <ImageView
@@ -173,11 +173,11 @@
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60dp"
+        android:layout_height="62dp"
         app:srcCompat="@drawable/icon"
-        tools:layout_editor_absoluteX="54dp"
-        tools:layout_editor_absoluteY="480dp" />
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="468dp" />
 
     <TextView
         android:id="@+id/textView37"
@@ -311,10 +311,11 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="68dp"
+        android:layout_height="60dp"
         app:srcCompat="@drawable/icon"
-        tools:layout_editor_absoluteX="55dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="47dp"
         tools:layout_editor_absoluteY="397dp" />
 
     <ImageView

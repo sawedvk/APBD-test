@@ -79,6 +79,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:rippleColor="@color/white"
-        tools:cornerRadius="12" />
+        tools:cornerRadius="12"
+        android:onClick="showToast"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
