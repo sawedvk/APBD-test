@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.boot_up)
     }
     fun showToast(view: View) {
-        myToast(Pesan = "testrun").show()
+        myToast(Pesan = "Login Succesful").show()
     }
 
 }
