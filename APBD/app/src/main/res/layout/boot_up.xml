@@ -78,6 +78,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:rippleColor="@color/white"
         tools:cornerRadius="12"
-        android:onClick="showToast"/>
+        android:onClick="showToast"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

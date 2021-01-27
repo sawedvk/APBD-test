@@ -1,5 +1,6 @@
 package com.example.apbd
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -15,6 +16,8 @@ class MainActivity : AppCompatActivity() {
     }
     fun showToast(view: View) {
         myToast(Pesan = "Login Succesful").show()
+        var intentlogin = Intent(this,LoginPage::class.java)
+        startActivity(intentlogin)
     }
 
 }

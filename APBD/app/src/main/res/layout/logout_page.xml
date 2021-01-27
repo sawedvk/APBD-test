@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#06D6A0">
+    android:background="#06D6A0"
+    tools:context=".LogoutPage">
 
     <TextView
         android:id="@+id/textView14"
@@ -13,7 +14,13 @@
         android:text="Export backup files to e-mail"
         android:textSize="18sp"
         tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="459dp" />
+        tools:layout_editor_absoluteY="459dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.56"/>
 
     <TextView
         android:id="@+id/textView15"
@@ -23,7 +30,8 @@
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         tools:layout_editor_absoluteX="150dp"
-        tools:layout_editor_absoluteY="56dp" />
+        tools:layout_editor_absoluteY="56dp"
+        />
 
     <TextView
         android:id="@+id/textView16"
