@@ -192,8 +192,10 @@
         android:layout_width="271dp"
         android:layout_height="168dp"
         android:background="@drawable/box"
-        tools:layout_editor_absoluteX="71dp"
-        tools:layout_editor_absoluteY="281dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button2"
@@ -202,9 +204,11 @@
         android:backgroundTint="#EF476F"
         android:text="Cancel"
         app:iconTint="#74FFFFFF"
-        tools:cornerRadius="20"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="365dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton4"
+        tools:cornerRadius="20" />
 
     <Button
         android:id="@+id/button3"
@@ -213,7 +217,9 @@
         android:backgroundTint="#06D6A0"
         android:text="save and plan now!"
         app:iconTint="#74FFFFFF"
-        tools:cornerRadius="20"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="294dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/imageButton4"
+        tools:cornerRadius="20" />
 </androidx.constraintlayout.widget.ConstraintLayout>

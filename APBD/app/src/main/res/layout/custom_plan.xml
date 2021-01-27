@@ -40,11 +40,17 @@
         android:id="@+id/rectangle_9"
         android:layout_width="348dp"
         android:layout_height="530dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="37dp"
         android:layout_marginLeft="37dp"
         android:layout_marginTop="91dp"
-        android:background="@drawable/rectangle_9" />
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="110dp"
+        android:background="@drawable/rectangle_10" />
 
     <View
 
@@ -198,17 +204,17 @@
 
     <TextView
         android:id="@+id/textView29"
-        android:layout_width="88dp"
+        android:layout_width="109dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="163dp"
-        android:layout_marginTop="211dp"
-        android:layout_marginEnd="160dp"
-        android:layout_marginBottom="490dp"
-        android:text="Plan Name"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="207dp"
+        android:layout_marginEnd="152dp"
+        android:layout_marginBottom="492dp"
+        android:text="Custom Plan"
         android:textColor="#000000"
         android:textSize="18sp" />
 
@@ -224,7 +230,7 @@
         android:layout_marginTop="249dp"
         android:layout_marginEnd="129dp"
         android:layout_marginBottom="452dp"
-        android:text="Rp 4.000.000 / month"
+        android:text="Rp ________ / month"
         android:textColor="#686868"
         android:textSize="14sp" />
 
@@ -316,11 +322,11 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="231dp"
+        android:layout_marginStart="237dp"
         android:layout_marginTop="305dp"
-        android:layout_marginEnd="57dp"
+        android:layout_marginEnd="51dp"
         android:layout_marginBottom="396dp"
-        android:text="Rp 1.350.000,-"
+        android:text="Rp ________,-"
         android:textColor="#000000"
         android:textSize="18sp" />
 
@@ -436,11 +442,11 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="252dp"
-        android:layout_marginTop="386dp"
-        android:layout_marginEnd="58dp"
-        android:layout_marginBottom="315dp"
-        android:text="Rp 550.000,-"
+        android:layout_marginStart="236dp"
+        android:layout_marginTop="384dp"
+        android:layout_marginEnd="74dp"
+        android:layout_marginBottom="317dp"
+        android:text="Rp ________,-"
         android:textColor="#000000"
         android:textSize="18sp" />
 
@@ -456,7 +462,7 @@
         android:layout_marginTop="466dp"
         android:layout_marginEnd="52dp"
         android:layout_marginBottom="235dp"
-        android:text="Rp 1.100.000,-"
+        android:text="Rp ________,-"
         android:textColor="#000000"
         android:textSize="18sp" />
 
@@ -472,7 +478,7 @@
         android:layout_marginTop="548dp"
         android:layout_marginEnd="53dp"
         android:layout_marginBottom="153dp"
-        android:text="Rp 1.000.000,-"
+        android:text="Rp ________,-"
         android:textColor="#000000"
         android:textSize="18sp" />
 </RelativeLayout>

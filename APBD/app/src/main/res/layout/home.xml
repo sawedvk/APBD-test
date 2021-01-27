@@ -90,9 +90,13 @@
         android:id="@+id/group_32"
         android:layout_width="411dp"
         android:layout_height="73dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
+        android:layout_marginEnd="0dp"
         android:layout_marginBottom="0dp"
         android:background="#26547C" />
 
@@ -188,17 +192,24 @@
         android:id="@+id/arrow_down1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginStart="45dp"
         android:layout_marginEnd="343dp"
         android:layout_marginBottom="587dp"
         app:srcCompat="@drawable/arrow_bottom" />
+
     <ImageView
         android:id="@+id/arrow_down2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginStart="149dp"
+        android:layout_marginTop="120dp"
         android:layout_marginEnd="238dp"
         android:layout_marginBottom="587dp"
         app:srcCompat="@drawable/arrow_bottom" />
@@ -207,8 +218,12 @@
         android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginStart="237dp"
+        android:layout_marginTop="122dp"
         android:layout_marginEnd="150dp"
         android:layout_marginBottom="585dp"
         app:srcCompat="@drawable/arrow_up" />
@@ -217,8 +232,12 @@
         android:id="@+id/imageView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginStart="346dp"
+        android:layout_marginTop="120dp"
         android:layout_marginEnd="42dp"
         android:layout_marginBottom="587dp"
         app:srcCompat="@drawable/arrow_up" />
@@ -238,16 +257,23 @@
 
 
     <!-- Group 5 -->
+
     <View
         android:id="@+id/group_5"
-        android:layout_width="360dp"
+        android:layout_width="364dp"
         android:layout_height="109dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="29dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="224dp"
-        android:background="@drawable/layer_list"
-        />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="232dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="390dp"
+        android:background="@drawable/layer_list" />
+
     <TextView
         android:id="@+id/total"
         android:layout_width="45dp"

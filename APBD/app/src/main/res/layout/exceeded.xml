@@ -328,8 +328,10 @@
         android:layout_width="357dp"
         android:layout_height="238dp"
         android:background="@drawable/box"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="246dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -337,9 +339,11 @@
         android:layout_height="124dp"
         android:background="#FFFFFF"
         android:backgroundTint="#EF476F"
-        app:srcCompat="@android:drawable/stat_sys_warning"
-        tools:layout_editor_absoluteX="141dp"
-        tools:layout_editor_absoluteY="282dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton10"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/imageButton5"
+        app:srcCompat="@android:drawable/stat_sys_warning" />
 
     <TextView
         android:id="@+id/textView18"
@@ -349,9 +353,11 @@
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="18sp"
-        tools:fontFamily="@font/roboto_bold"
-        tools:layout_editor_absoluteX="72dp"
-        tools:layout_editor_absoluteY="426dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textView12"
+        tools:fontFamily="@font/roboto_bold" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
