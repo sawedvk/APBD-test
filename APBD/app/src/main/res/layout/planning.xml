@@ -6,8 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#06D6A0"
-    tools:context=".Planning"
-    >
+    tools:context=".MainActivity">
 
 
     <!-- Planning -->
@@ -67,8 +66,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="28dp"
         android:layout_marginBottom="23dp"
-        app:srcCompat="@drawable/settings"
-        android:onClick="goToSettings"/>
+        app:srcCompat="@drawable/settings" />
 
     <TextView
         android:id="@+id/new_transac3"
@@ -90,8 +88,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="104dp"
         android:layout_marginBottom="22dp"
-        app:srcCompat="@drawable/wallet"
-        android:onClick="goToHistory"/>
+        app:srcCompat="@drawable/wallet" />
 
     <TextView
         android:id="@+id/new_transac2"
@@ -103,9 +100,7 @@
         android:layout_marginTop="712dp"
         android:gravity="center_horizontal|top"
         android:text="@string/history"
-        android:textAppearance="@style/new_transac"
-        android:onClick="goToHistory"
-        />
+        android:textAppearance="@style/new_transac" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -115,8 +110,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="190dp"
         android:layout_marginBottom="23dp"
-        app:srcCompat="@drawable/add"
-        />
+        app:srcCompat="@drawable/add" />
 
     <TextView
         android:id="@+id/new_transac"
