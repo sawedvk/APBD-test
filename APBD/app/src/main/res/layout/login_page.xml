@@ -43,7 +43,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:rippleColor="@color/white"
-        tools:cornerRadius="12" />
+        tools:cornerRadius="12"
+        android:onClick="goToRegis"/>
 
     <Button
         android:id="@+id/buttonRegisterGoogle2"

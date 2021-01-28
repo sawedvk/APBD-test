@@ -51,6 +51,7 @@
         android:scrollbarThumbHorizontal="@color/white"
         android:scrollbarThumbVertical="@color/white"
         android:text="Register"
+        android:onClick="goToRegis"
         android:textColor="#000000"
         android:textColorHighlight="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/buttonLogin"

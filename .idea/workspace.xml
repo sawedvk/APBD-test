@@ -6,10 +6,7 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="baad6870-7167-4603-a893-38d07409df3a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/APBD/app/src/main/java/com/example/apbd/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/APBD/app/src/main/java/com/example/apbd/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APBD/app/src/main/res/layout/boot_up.xml" beforeDir="false" afterPath="$PROJECT_DIR$/APBD/app/src/main/res/layout/boot_up.xml" afterDir="false" />
-    </list>
+    <list default="true" id="baad6870-7167-4603-a893-38d07409df3a" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,7 +24,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/APBD" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="SvnConfiguration">
@@ -48,9 +45,9 @@
       <screen x="62" y="0" width="1474" height="864" />
     </state>
     <state x="0" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/62.0.1474.864@62.0.1474.864" timestamp="1611499824637" />
-    <state x="580" y="187" key="FileChooserDialogImpl" timestamp="1611499832551">
+    <state x="580" y="187" key="FileChooserDialogImpl" timestamp="1611848922560">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state x="580" y="187" key="FileChooserDialogImpl/62.0.1474.864@62.0.1474.864" timestamp="1611499832551" />
+    <state x="580" y="187" key="FileChooserDialogImpl/62.0.1474.864@62.0.1474.864" timestamp="1611848922560" />
   </component>
 </project>

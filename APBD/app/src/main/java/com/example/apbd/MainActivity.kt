@@ -19,5 +19,8 @@ class MainActivity : AppCompatActivity() {
         var intentlogin = Intent(this,LoginPage::class.java)
         startActivity(intentlogin)
     }
-
+    fun goToRegis(view: View) {
+        var intentRegis = Intent(this, Regispage::class.java)
+        startActivity(intentRegis)
+    }
 }

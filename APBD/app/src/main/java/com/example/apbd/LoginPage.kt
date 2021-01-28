@@ -21,4 +21,9 @@ class LoginPage : AppCompatActivity() {
         var intenthome = Intent(this,Home::class.java)
         startActivity(intenthome)
     }
+
+    fun goToRegis(view: View){
+        var intentRegis = Intent(this,Regispage::class.java)
+        startActivity(intentRegis)
+    }
 }
