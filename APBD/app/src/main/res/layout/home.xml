@@ -174,7 +174,8 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="280dp"
         android:layout_marginBottom="26dp"
-        app:srcCompat="@drawable/bookmark" />
+        app:srcCompat="@drawable/bookmark"
+        android:onClick="goToPlan"/>
 
     <TextView
         android:id="@+id/home2"
@@ -480,7 +481,8 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="357dp"
         android:layout_marginBottom="24dp"
-        app:srcCompat="@drawable/dashboard" />
+        app:srcCompat="@drawable/dashboard"
+        android:onClick="goToHome"/>
     <!-- Home -->
     <TextView
         android:id="@+id/home"

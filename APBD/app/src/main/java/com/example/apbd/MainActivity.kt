@@ -23,4 +23,5 @@ class MainActivity : AppCompatActivity() {
         var intentRegis = Intent(this, Regispage::class.java)
         startActivity(intentRegis)
     }
+
 }
