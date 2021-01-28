@@ -1,10 +1,12 @@
 package com.example.apbd
 
+import android.content.DialogInterface
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     private fun myToast(Pesan: String,Waktu: Int= Toast.LENGTH_SHORT)
@@ -22,5 +24,15 @@ class MainActivity : AppCompatActivity() {
     fun goToRegis(view: View) {
         var intentRegis = Intent(this, Regispage::class.java)
         startActivity(intentRegis)
+    }
+
+    fun alertKonfirmasi(view: View){
+        var dialog = AlertDialog.Builder( this)
+            .setMessage("New Transaction")
+            .setPositiveButton("Income", DialogInterface.OnClickListener{ dialogInterface, i -> Toast.makeText(this,"INCOME", Toast.LENGTH_LONG).show()
+            })
+            .setNegativeButton("Expense", DialogInterface.OnClickListener{ dialogInterface, i -> Toast.makeText(this,"EXPENSE", Toast.LENGTH_LONG).show()
+            })
+        dialog.show()
     }
 }
