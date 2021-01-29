@@ -5,17 +5,17 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 
-class Planning : AppCompatActivity() {
+class customPlanning : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.planning)
+        setContentView(R.layout.custom_plan)
     }
     fun goToHome(view: View) {
         var intenthome = Intent(this,Home::class.java)
         startActivity(intenthome)
     }
     fun goToPlan(view: View) {
-        var intenPlan = Intent(this,Planning::class.java)
+        var intenPlan = Intent(this,customPlanning::class.java)
         startActivity(intenPlan)
     }
     fun goToHistory(view: View) {

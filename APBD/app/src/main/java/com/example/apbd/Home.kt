@@ -4,7 +4,6 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 
@@ -14,6 +13,14 @@ class Home : AppCompatActivity() {
         setContentView(R.layout.home)
     }
 
+    fun goToIncome(view: View) {
+        var intentIncome = Intent(this, income::class.java)
+        startActivity(intentIncome)
+    }
+    fun goToExpense(view: View) {
+        var intentexpense = Intent(this, expense::class.java)
+        startActivity(intentexpense)
+    }
     fun goToHome(view: View) {
         var intenthome = Intent(this,Home::class.java)
         startActivity(intenthome)
@@ -34,9 +41,9 @@ class Home : AppCompatActivity() {
     fun alertKonfirmasi(view: View){
         var dialog = AlertDialog.Builder( this)
             .setMessage("New Transaction")
-            .setPositiveButton("Income", DialogInterface.OnClickListener{ dialogInterface, i -> Toast.makeText(this,"INCOME", Toast.LENGTH_LONG).show()
+            .setPositiveButton("Income", DialogInterface.OnClickListener{ dialogInterface, i -> goToIncome(view)
             })
-            .setNegativeButton("Expense", DialogInterface.OnClickListener{ dialogInterface, i -> Toast.makeText(this,"EXPENSE", Toast.LENGTH_LONG).show()
+            .setNegativeButton("Expense", DialogInterface.OnClickListener{ dialogInterface, i -> goToExpense(view)
             })
         dialog.show()
     }

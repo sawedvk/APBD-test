@@ -1,6 +1,7 @@
 package com.example.apbd
 
 import android.content.DialogInterface
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -13,12 +14,17 @@ class Settings : AppCompatActivity() {
         setContentView(R.layout.settings_page)
     }
 
+    fun goToBootUp(view: View) {
+        var intentbootup = Intent(this,MainActivity::class.java)
+        startActivity(intentbootup)
+    }
+
     fun alertKonfirmasi(view: View){
         var dialog = AlertDialog.Builder( this)
             .setMessage("Logout ?")
-            .setPositiveButton("Logout", DialogInterface.OnClickListener{ dialogInterface, i -> Toast.makeText(this,"LOGOUT", Toast.LENGTH_LONG).show()
+            .setPositiveButton("Logout", DialogInterface.OnClickListener{ dialogInterface, i -> goToBootUp(view)
             })
-            .setNegativeButton("Logout", DialogInterface.OnClickListener{ dialogInterface, i -> Toast.makeText(this,"CANCEL", Toast.LENGTH_LONG).show()
+            .setNegativeButton("Cancel", DialogInterface.OnClickListener{ dialogInterface, i -> Toast.makeText(this,"CANCEL", Toast.LENGTH_LONG).show()
             })
         dialog.show()
     }
