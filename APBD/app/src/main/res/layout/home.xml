@@ -5,25 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#06D6A0"
-    tools:context=".MainActivity"
-    tools:ignore="MissingDefaultResource"><![CDATA[
-
-
-
-
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-
-
-
-
-
-
-
-
-    ]]><!-- Expense -->
+    tools:context=".Home"
+    tools:ignore="MissingDefaultResource"
+    >
 
     <TextView
         android:id="@+id/hai_name_"
@@ -132,7 +116,8 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        android:onClick="goToPlan"/>
 
     <ImageView
         android:id="@+id/imageView7"
@@ -145,7 +130,8 @@
         app:layout_constraintHorizontal_bias="0.934"
         app:layout_constraintStart_toStartOf="@+id/group_32"
         app:layout_constraintTop_toTopOf="@+id/group_32"
-        app:srcCompat="@drawable/settings" />
+        app:srcCompat="@drawable/settings"
+        android:onClick="goToSettings"/>
 
     <TextView
         android:id="@+id/new_transac3"
@@ -175,7 +161,8 @@
         app:layout_constraintHorizontal_bias="0.745"
         app:layout_constraintStart_toStartOf="@+id/group_32"
         app:layout_constraintTop_toTopOf="@+id/group_32"
-        app:srcCompat="@drawable/wallet" />
+        app:srcCompat="@drawable/wallet"
+        android:onClick="goToHistory"/>
 
 
     <!-- Group 5 -->

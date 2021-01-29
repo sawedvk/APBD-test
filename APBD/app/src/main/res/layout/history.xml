@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#06D6A0">
+    android:background="#06D6A0"
+    tools:context=".history">
 
     <Button
         android:id="@+id/button5"
@@ -20,7 +21,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.957"
-        tools:cornerRadius="20" />
+        tools:cornerRadius="20"
+        />
 
     <Button
         android:id="@+id/button6"
@@ -295,7 +297,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        />
 
     <ImageButton
         android:id="@+id/imageButton14"
@@ -308,7 +311,8 @@
         app:layout_constraintStart_toStartOf="@+id/textView23"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.989"
-        app:srcCompat="@drawable/homeicon" />
+        app:srcCompat="@drawable/homeicon"
+        android:onClick="goToHome"/>
 
     <ImageButton
         android:id="@+id/imageButton15"
@@ -321,7 +325,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.989"
-        app:srcCompat="@drawable/planicon" />
+        app:srcCompat="@drawable/planicon"
+        android:onClick="goToPlan"/>
 
     <ImageButton
         android:id="@+id/imageButton16"
@@ -334,7 +339,8 @@
         app:layout_constraintStart_toStartOf="@+id/textView23"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.991"
-        app:srcCompat="@drawable/newtransaction" />
+        app:srcCompat="@drawable/newtransaction"
+        android:onClick="alertKonfirmasi"/>
 
     <ImageButton
         android:id="@+id/imageButton17"
@@ -347,7 +353,8 @@
         app:layout_constraintStart_toStartOf="@+id/textView23"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.992"
-        app:srcCompat="@drawable/historyicon" />
+        app:srcCompat="@drawable/historyicon"
+        android:onClick="goToHistory"/>
 
     <ImageButton
         android:id="@+id/imageButton18"
@@ -360,7 +367,8 @@
         app:layout_constraintStart_toStartOf="@+id/textView23"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.992"
-        app:srcCompat="@drawable/settingsicon" />
+        app:srcCompat="@drawable/settingsicon"
+        android:onClick="goToSettings"/>
 
     <ImageView
         android:id="@+id/imageView2"

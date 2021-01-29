@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 class income : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.income)
     }
 
     fun alertKonfirmasi(view: View){

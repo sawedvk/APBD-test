@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#06D6A0"
-    tools:context=".MainActivity">
+    tools:context=".Planning">
 
 
     <!-- Planning -->
@@ -66,7 +66,8 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="28dp"
         android:layout_marginBottom="23dp"
-        app:srcCompat="@drawable/settings" />
+        app:srcCompat="@drawable/settings"
+        android:onClick="goToSettings"/>
 
     <TextView
         android:id="@+id/new_transac3"
@@ -88,7 +89,8 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="104dp"
         android:layout_marginBottom="22dp"
-        app:srcCompat="@drawable/wallet" />
+        app:srcCompat="@drawable/wallet"
+        android:onClick="goToHistory"/>
 
     <TextView
         android:id="@+id/new_transac2"
@@ -110,7 +112,8 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="190dp"
         android:layout_marginBottom="23dp"
-        app:srcCompat="@drawable/add" />
+        app:srcCompat="@drawable/add"
+        android:onClick="alertKonfirmasi"/>
 
     <TextView
         android:id="@+id/new_transac"
@@ -132,7 +135,8 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="280dp"
         android:layout_marginBottom="26dp"
-        app:srcCompat="@drawable/bookmark" />
+        app:srcCompat="@drawable/bookmark"
+        android:onClick="goToPlan"/>
 
     <TextView
         android:id="@+id/home2"
@@ -168,7 +172,8 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="357dp"
         android:layout_marginBottom="24dp"
-        app:srcCompat="@drawable/dashboard" />
+        app:srcCompat="@drawable/dashboard"
+        android:onClick="goToHome"/>
     <!-- Home -->
     <TextView
         android:id="@+id/home"
@@ -332,10 +337,10 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="64dp"
+        android:layout_marginStart="59dp"
         android:layout_marginTop="288dp"
-        android:layout_marginEnd="283dp"
-        android:layout_marginBottom="383dp"
+        android:layout_marginEnd="288dp"
+        android:layout_marginBottom="382dp"
         app:srcCompat="@drawable/icon" />
 
     <ImageView

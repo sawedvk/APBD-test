@@ -8,12 +8,11 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 
-class history : AppCompatActivity() {
+class Planning : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.history)
+        setContentView(R.layout.planning)
     }
-
     fun goToHome(view: View) {
         var intenthome = Intent(this,Home::class.java)
         startActivity(intenthome)

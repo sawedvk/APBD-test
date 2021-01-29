@@ -26,13 +26,5 @@ class MainActivity : AppCompatActivity() {
         startActivity(intentRegis)
     }
 
-    fun alertKonfirmasi(view: View){
-        var dialog = AlertDialog.Builder( this)
-            .setMessage("New Transaction")
-            .setPositiveButton("Income", DialogInterface.OnClickListener{ dialogInterface, i -> Toast.makeText(this,"INCOME", Toast.LENGTH_LONG).show()
-            })
-            .setNegativeButton("Expense", DialogInterface.OnClickListener{ dialogInterface, i -> Toast.makeText(this,"EXPENSE", Toast.LENGTH_LONG).show()
-            })
-        dialog.show()
-    }
+
 }
