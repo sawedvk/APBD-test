@@ -398,6 +398,12 @@
         app:layout_constraintStart_toStartOf="@+id/group_5"
         app:layout_constraintTop_toTopOf="@+id/group_5" />
 
+    <!-- icon -->
+    <!-- Transaction Name -->
+    <!-- Transaction Date -->
+    <!-- Price- -->
+    <!-- Group 3 -->
+
     <TextView
         android:id="@+id/latest_tran"
         android:layout_width="168dp"
@@ -412,13 +418,7 @@
         app:layout_constraintHorizontal_bias="0.123"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.522" />
-
-    <!-- icon -->
-    <!-- Transaction Name -->
-    <!-- Transaction Date -->
-    <!-- Price- -->
-    <!-- Group 3 -->
+        app:layout_constraintVertical_bias="0.546" />
 
     <View
         android:id="@+id/group_2"
