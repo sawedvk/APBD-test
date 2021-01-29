@@ -21,7 +21,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.957"
-        tools:cornerRadius="20" />
+        tools:cornerRadius="20"
+        android:onClick="alertKonfirmasi"/>
 
     <Button
         android:id="@+id/button6"
@@ -476,6 +477,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023"
-        app:srcCompat="?attr/actionModeCloseDrawable" />
+        app:srcCompat="?attr/actionModeCloseDrawable"
+        android:onClick="goToHome"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,11 +2,10 @@ package com.example.apbd
 
 import android.content.DialogInterface
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 
 class history : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,6 +13,14 @@ class history : AppCompatActivity() {
         setContentView(R.layout.history)
     }
 
+    fun goToIncome(view: View) {
+        var intentIncome = Intent(this, income::class.java)
+        startActivity(intentIncome)
+    }
+    fun goToExpense(view: View) {
+        var intentexpense = Intent(this, expense::class.java)
+        startActivity(intentexpense)
+    }
     fun goToHome(view: View) {
         var intenthome = Intent(this,Home::class.java)
         startActivity(intenthome)
@@ -33,11 +40,11 @@ class history : AppCompatActivity() {
     }
     fun alertKonfirmasi(view: View){
         var dialog = AlertDialog.Builder( this)
-            .setMessage("New Transaction")
-            .setPositiveButton("Income", DialogInterface.OnClickListener{ dialogInterface, i -> Toast.makeText(this,"INCOME", Toast.LENGTH_LONG).show()
-            })
-            .setNegativeButton("Expense", DialogInterface.OnClickListener{ dialogInterface, i -> Toast.makeText(this,"EXPENSE", Toast.LENGTH_LONG).show()
-            })
+                .setMessage("New Transaction")
+                .setPositiveButton("Income", DialogInterface.OnClickListener{ dialogInterface, i -> goToIncome(view)
+                })
+                .setNegativeButton("Expense", DialogInterface.OnClickListener{ dialogInterface, i -> goToExpense(view)
+                })
         dialog.show()
     }
 }
