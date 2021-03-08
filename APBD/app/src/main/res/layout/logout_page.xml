@@ -15,7 +15,6 @@
         android:textSize="18sp"
         tools:layout_editor_absoluteX="40dp"
         tools:layout_editor_absoluteY="459dp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"

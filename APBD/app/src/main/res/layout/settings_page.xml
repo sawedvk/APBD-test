@@ -9,8 +9,8 @@
 
     <TextView
         android:id="@+id/textView41"
-        android:layout_width="415dp"
-        android:layout_height="79dp"
+        android:layout_width="481dp"
+        android:layout_height="93dp"
         android:background="@drawable/rectangle"
         android:backgroundTint="#26547C"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -254,57 +254,57 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#00FFFFFF"
+        android:onClick="alertIncomeExpense"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.985"
-        app:srcCompat="@drawable/new_icon"
-        android:onClick="alertIncomeExpense"/>
+        app:layout_constraintVertical_bias="0.986"
+        app:srcCompat="@drawable/new_icon" />
 
     <ImageButton
         android:id="@+id/imageButton3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="52dp"
+        android:layout_height="54dp"
         android:layout_marginEnd="264dp"
         android:backgroundTint="#00FFFFFF"
+        android:onClick="goToPlan"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.976"
+        app:layout_constraintHorizontal_bias="0.852"
         app:layout_constraintStart_toStartOf="@+id/textView41"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.989"
-        app:srcCompat="@drawable/plan_icon"
-        android:onClick="goToPlan"/>
+        app:layout_constraintVertical_bias="0.977"
+        app:srcCompat="@drawable/plan_icon" />
 
     <ImageButton
         android:id="@+id/imageButton4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#00FFFFFF"
+        android:onClick="goToSettings"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.954"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.985"
-        app:srcCompat="@drawable/settings_icon"
-        android:onClick="goToSettings"/>
+        app:layout_constraintVertical_bias="0.986"
+        app:srcCompat="@drawable/settings_icon" />
 
     <ImageButton
         android:id="@+id/imageButton5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#00FFFFFF"
+        android:onClick="goToHistory"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.745"
+        app:layout_constraintHorizontal_bias="0.748"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.986"
-        app:srcCompat="@drawable/history_icon"
-        android:onClick="goToHistory"/>
+        app:layout_constraintVertical_bias="0.983"
+        app:srcCompat="@drawable/history_icon" />
 
     <TextView
         android:id="@+id/textView7"

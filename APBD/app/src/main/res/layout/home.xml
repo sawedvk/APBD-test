@@ -101,154 +101,7 @@
         app:layout_constraintTop_toTopOf="@+id/group_4"
         app:layout_constraintVertical_bias="0.272" />
 
-    <View
 
-        android:id="@+id/group_32"
-        android:layout_width="440dp"
-        android:layout_height="72dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:background="#26547C"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.517"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="30dp"
-        android:layout_height="40dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:onClick="goToSettings"
-        app:layout_constraintBottom_toTopOf="@+id/new_transac3"
-        app:layout_constraintEnd_toEndOf="@+id/group_32"
-        app:layout_constraintHorizontal_bias="0.902"
-        app:layout_constraintStart_toStartOf="@+id/group_32"
-        app:layout_constraintTop_toTopOf="@+id/group_32"
-        app:layout_constraintVertical_bias="0.625"
-        app:srcCompat="@drawable/settings" />
-
-    <TextView
-        android:id="@+id/new_transac3"
-        android:layout_width="65dp"
-        android:layout_height="17dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:gravity="center_horizontal|top"
-        android:text="@string/settings"
-        android:textAppearance="@style/new_transac"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.979"
-        app:layout_constraintStart_toStartOf="@+id/group_32"
-        app:layout_constraintTop_toTopOf="@+id/group_32"
-        app:layout_constraintVertical_bias="0.875" />
-
-
-    <!-- Group 5 -->
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="30dp"
-        android:layout_height="40dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:onClick="goToHistory"
-        app:layout_constraintBottom_toTopOf="@+id/new_transac2"
-        app:layout_constraintEnd_toEndOf="@+id/group_32"
-        app:layout_constraintHorizontal_bias="0.721"
-        app:layout_constraintStart_toStartOf="@+id/group_32"
-        app:layout_constraintTop_toTopOf="@+id/group_32"
-        app:layout_constraintVertical_bias="0.625"
-        app:srcCompat="@drawable/wallet" />
-
-    <TextView
-        android:id="@+id/new_transac2"
-        android:layout_width="67dp"
-        android:layout_height="18dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginBottom="4dp"
-        android:gravity="center_horizontal|top"
-        android:text="@string/history"
-        android:textAppearance="@style/new_transac"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/group_32"
-        app:layout_constraintHorizontal_bias="0.753"
-        app:layout_constraintStart_toStartOf="@+id/group_32"
-        app:layout_constraintTop_toTopOf="@+id/group_32"
-        app:layout_constraintVertical_bias="0.96" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="30dp"
-        android:layout_height="40dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:onClick="alertKonfirmasi"
-        app:layout_constraintBottom_toTopOf="@+id/new_transac"
-        app:layout_constraintEnd_toEndOf="@+id/group_32"
-        app:layout_constraintHorizontal_bias="0.479"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/group_32"
-        app:layout_constraintVertical_bias="0.625"
-        app:srcCompat="@drawable/add" />
-
-    <TextView
-        android:id="@+id/new_transac"
-        android:layout_width="100dp"
-        android:layout_height="18dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginBottom="4dp"
-        android:gravity="center_horizontal|top"
-        android:text="@string/add"
-        android:textAppearance="@style/new_transac"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
-        app:layout_constraintStart_toStartOf="@+id/group_32"
-        app:layout_constraintTop_toTopOf="@+id/group_32"
-        app:layout_constraintVertical_bias="0.96" />
-
-    <TextView
-        android:id="@+id/home2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginBottom="8dp"
-        android:gravity="center_horizontal|top"
-        android:text="@string/myplan"
-        android:textAppearance="@style/home"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.239"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="30dp"
-        android:layout_height="40dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        app:layout_constraintBottom_toTopOf="@+id/home2"
-        app:layout_constraintEnd_toEndOf="@+id/group_32"
-        app:layout_constraintHorizontal_bias="0.28"
-        app:layout_constraintStart_toStartOf="@+id/group_32"
-        app:layout_constraintTop_toTopOf="@+id/group_32"
-        app:layout_constraintVertical_bias="0.625"
-        app:srcCompat="@drawable/bookmark"
-        android:onClick="goToPlan"/>
 
     <ImageView
         android:id="@+id/arrow_down1"
@@ -573,6 +426,177 @@
         app:layout_constraintTop_toTopOf="@+id/group_3"
         app:layout_constraintVertical_bias="0.508" />
 
+    <View
+
+        android:id="@+id/group_32"
+        android:layout_width="458dp"
+        android:layout_height="76dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:background="#26547C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        android:onClick="goToHistory"/>
+
+    <TextView
+        android:id="@+id/new_transac3"
+        android:layout_width="76dp"
+        android:layout_height="12dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|top"
+        android:text="@string/settings"
+        android:textAppearance="@style/new_transac"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.984" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.732"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.963"
+        app:srcCompat="@drawable/wallet" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.283"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.966"
+        app:srcCompat="@drawable/bookmark"
+        android:onClick="goToPlan"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.963"
+        app:srcCompat="@drawable/dashboard"
+        android:onClick="goToHome"/>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.963"
+        app:srcCompat="@drawable/add"
+        android:onClick="alertKonfirmasi"/>
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.937"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.963"
+        app:srcCompat="@drawable/settings"
+        android:onClick="goToSettings"/>
+
+
+    <!-- Group 5 -->
+    <!-- Budget Left -->
+    <!-- Carefull ! -->
+
+    <!-- Latest Transcation -->
+    <!-- History  -->
+    <!-- Ellipse 1 -->
+    <!-- icon -->
+    <!-- Transaction Name -->
+    <!-- Transaction Date -->
+    <!-- Price- -->
+    <!-- Group 3 -->
+
+    <!-- Home -->
+
+    <TextView
+        android:id="@+id/new_transac2"
+        android:layout_width="76dp"
+        android:layout_height="12dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|top"
+        android:text="@string/history"
+        android:textAppearance="@style/new_transac"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.761"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.984" />
+
+    <TextView
+        android:id="@+id/new_transac"
+        android:layout_width="76dp"
+        android:layout_height="12dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|top"
+        android:text="@string/add"
+        android:textAppearance="@style/new_transac"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.981" />
+
+    <TextView
+        android:id="@+id/home2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|top"
+        android:text="@string/myplan"
+        android:textAppearance="@style/home"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.276"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.984" />
+
     <TextView
         android:id="@+id/home"
         android:layout_width="wrap_content"
@@ -582,27 +606,16 @@
         android:gravity="center_horizontal|top"
         android:text="@string/home"
         android:textAppearance="@style/home"
-        android:textSize="12sp"
+        android:textSize="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/group_32"
-        app:layout_constraintHorizontal_bias="0.103"
-        app:layout_constraintStart_toStartOf="@+id/group_32"
-        app:layout_constraintTop_toTopOf="@+id/group_32"
-        app:layout_constraintVertical_bias="0.892" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.984"
+        android:onClick="goToHome"/>
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="30dp"
-        android:layout_height="40dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:onClick="goToHome"
-        app:layout_constraintBottom_toTopOf="@+id/home"
-        app:layout_constraintEnd_toEndOf="@+id/group_32"
-        app:layout_constraintHorizontal_bias="0.107"
-        app:layout_constraintStart_toStartOf="@+id/group_32"
-        app:layout_constraintTop_toTopOf="@+id/group_32"
-        app:srcCompat="@drawable/dashboard" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
