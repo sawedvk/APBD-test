@@ -94,14 +94,13 @@
         app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent" />
 
+
     <EditText
-        style=""
         android:id="@+id/editTextTextEmailAddress"
         android:layout_width="312dp"
         android:layout_height="47dp"
         android:layout_marginBottom="28dp"
         android:ems="10"
-        android:hint="Email"
         android:inputType="textEmailAddress"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
@@ -109,4 +108,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/EmailValidation"
+        android:layout_width="167dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="155dp"
+        android:layout_height="31dp"
+        android:layout_margin="10dp"
+        android:buttonTint="@color/black"
+        android:text="Remember Email"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.164"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.547" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
