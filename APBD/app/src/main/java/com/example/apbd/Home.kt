@@ -1,16 +1,31 @@
 package com.example.apbd
 
+
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.home.*
 
 class Home : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home)
+
+
+        var usr:User? = intent.getParcelableExtra<User>(EXTRA_USER)
+//        var usr:User=User()
+        hai_name_.setText("Hello ${usr?.username} ")
+
+//        if(usr?.username==null){
+//            hai_name_.setText("Username tidak ada")
+//        }
+//        else{
+//            hai_name_.setText("Hello Username")
+//        }
+
     }
 
     fun goToIncome(view: View) {

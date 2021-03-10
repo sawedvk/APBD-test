@@ -1,13 +1,12 @@
     package com.example.apbd
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
-import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.login_page.*
 private const val The_Key ="Key"
     class LoginPage : AppCompatActivity() {
@@ -35,6 +34,13 @@ private const val The_Key ="Key"
             override fun afterTextChanged(s: Editable?) {
             }
         })
+
+        buttonRegisterGoogle2.setOnClickListener {
+            var Intent2Home = Intent(this, Home::class.java)
+            var usr=User(editTextTextEmailAddress.text.toString(), editTextTextPassword.text.toString())
+            Intent2Home.putExtra(EXTRA_USER,usr)
+            startActivity(Intent2Home)
+        }
 
     }
 
