@@ -16,15 +16,7 @@ class Home : AppCompatActivity() {
 
 
         var usr:User? = intent.getParcelableExtra<User>(EXTRA_USER)
-//        var usr:User=User()
         hai_name_.setText("Hello ${usr?.username} ")
-
-//        if(usr?.username==null){
-//            hai_name_.setText("Username tidak ada")
-//        }
-//        else{
-//            hai_name_.setText("Hello Username")
-//        }
 
     }
 
