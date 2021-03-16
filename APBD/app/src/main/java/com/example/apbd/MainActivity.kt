@@ -1,12 +1,10 @@
 package com.example.apbd
 
-import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.example.apbd.Fragment.FragmentLogin
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,7 +12,15 @@ class MainActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.boot_up)
+
+        val fragmentlogin = FragmentLogin()
+        supportFragmentManager.beginTransaction().replace(R.id.fragmentContainer,fragmentlogin ).commit()
     }
+
+    override fun  kirimData(editEdit:String){
+
+    }
+
     fun goToLogin(view: View) {
         var intentlogin = Intent(this,LoginPage::class.java)
         startActivity(intentlogin)
