@@ -54,11 +54,11 @@ private const val The_Key ="Key"
             EmailValidation.text = savedInstanceState.getString(The_Key) ?: "Empty"
         }
 
-    fun goToHome(view: View) {
-        myToast(Pesan = "Login Succesful").show()
-        var intenthome = Intent(this,Home::class.java)
-        startActivity(intenthome)
-    }
+//    fun goToHome(view: View) {
+//        myToast(Pesan = "Login Succesful").show()
+//        var intenthome = Intent(this,Home::class.java)
+//        startActivity(intenthome)
+//    }
 
     fun goToRegis(view: View){
         var intentRegis = Intent(this,Regispage::class.java)

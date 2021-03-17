@@ -26,7 +26,16 @@ class income : AppCompatActivity() {
     fun alertKonfirmasi(view: View){
         var dialog = AlertDialog.Builder( this)
             .setMessage("Save")
-            .setPositiveButton("Save and Plan", DialogInterface.OnClickListener{dialogInterface, i -> goToPlan(view)
+            .setPositiveButton("Save and Plan", DialogInterface.OnClickListener{dialogInterface, i ->
+                Thread(Runnable {
+                    for (i in 0..10)
+                        try {
+                            Thread.sleep(50L)
+                        } catch (e: Exception) {
+
+                        }
+                }).start()
+                goToPlan(view)
             })
             .setNegativeButton("Cancel", DialogInterface.OnClickListener{dialogInterface, i -> Toast.makeText(this,"CANCEL", Toast.LENGTH_LONG).show()
             })

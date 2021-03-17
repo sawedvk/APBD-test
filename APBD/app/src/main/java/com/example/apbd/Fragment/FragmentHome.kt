@@ -1,12 +1,16 @@
 package com.example.apbd.Fragment
 
+import android.content.DialogInterface
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import com.example.apbd.R
+import kotlinx.android.synthetic.main.home.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -36,11 +40,35 @@ class FragmentHome : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        val view =  inflater.inflate(R.layout.fragment_home, container, false)
 
         email = arguments?.getString("Email")
 
-        val emailTxt = view.findViewById<TextView>(R.id.)
+        val emailTxt = view.findViewById<TextView>(R.id.hasilTxt)
+
+        emailTxt.text = email
+
+        return view
+
+    }
+
+    fun alertKonfirmasi(view: View){
+        var dialog = AlertDialog.Builder( this)
+                .setMessage("New Transaction")
+                .setPositiveButton("Income", DialogInterface.OnClickListener{ dialogInterface, i -> goToIncome(view)
+                })
+                .setNegativeButton("Expense", DialogInterface.OnClickListener{ dialogInterface, i -> goToExpense(view)
+                })
+        dialog.show()
+    }
+
+    fun goToIncome(view: View) {
+        var intentIncome = Intent(this, income::class.java)
+        startActivity(intentIncome)
+    }
+    fun goToExpense(view: View) {
+        var intentexpense = Intent(this, expense::class.java)
+        startActivity(intentexpense)
     }
 
     companion object {

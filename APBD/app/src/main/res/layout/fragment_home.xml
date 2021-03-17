@@ -14,6 +14,621 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/hasilTxt"
+        android:layout_width="230dp"
+        android:layout_height="29dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|top"
+        android:textAppearance="@style/hai_name_"
+        android:textColor="#000000"
+        android:textColorHighlight="#000000"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.098" />
+
+    <View
+
+        android:id="@+id/rectangles"
+        android:layout_width="159dp"
+        android:layout_height="109dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/income_expense"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.183" />
+
+    <TextView
+        android:id="@+id/income"
+        android:layout_width="61dp"
+        android:layout_height="21dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|top"
+        android:text="@string/income"
+        android:textAppearance="@style/income"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangles"
+        app:layout_constraintEnd_toEndOf="@+id/rectangles"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="@+id/rectangles"
+        app:layout_constraintTop_toTopOf="@+id/rectangles"
+        app:layout_constraintVertical_bias="0.272" />
+
+    <TextView
+        android:id="@+id/rp_1_000_00"
+        android:layout_width="120dp"
+        android:layout_height="23dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|top"
+        android:text="@string/income_value"
+        android:textAppearance="@style/income_style"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangles"
+        app:layout_constraintEnd_toEndOf="@+id/rectangles"
+        app:layout_constraintStart_toStartOf="@+id/rectangles"
+        app:layout_constraintTop_toBottomOf="@+id/income" />
+
+    <View
+        android:id="@+id/group_4"
+        android:layout_width="159dp"
+        android:layout_height="109dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/income_expense"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.873"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.183" />
+
+    <TextView
+        android:id="@+id/expense"
+        android:layout_width="69dp"
+        android:layout_height="21dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|top"
+        android:text="@string/expense"
+        android:textAppearance="@style/income"
+        app:layout_constraintBottom_toBottomOf="@+id/group_4"
+        app:layout_constraintEnd_toEndOf="@+id/group_4"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="@+id/group_4"
+        app:layout_constraintTop_toTopOf="@+id/group_4"
+        app:layout_constraintVertical_bias="0.272" />
+
+
+
+    <ImageView
+        android:id="@+id/arrow_down1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/rp_1_000_00"
+        app:layout_constraintEnd_toStartOf="@+id/income"
+        app:layout_constraintStart_toStartOf="@+id/rectangles"
+        app:layout_constraintTop_toTopOf="@+id/rectangles"
+        app:srcCompat="@drawable/arrow_bottom" />
+
+    <ImageView
+        android:id="@+id/arrow_down2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toTopOf="@+id/rp_1_000_00"
+        app:layout_constraintEnd_toEndOf="@+id/rectangles"
+        app:layout_constraintHorizontal_bias="0.304"
+        app:layout_constraintStart_toEndOf="@+id/income"
+        app:layout_constraintTop_toTopOf="@+id/rectangles"
+        app:srcCompat="@drawable/arrow_bottom" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toTopOf="@+id/expense_value"
+        app:layout_constraintEnd_toEndOf="@+id/group_4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/expense"
+        app:layout_constraintTop_toTopOf="@+id/group_4"
+        app:layout_constraintVertical_bias="0.585"
+        app:srcCompat="@drawable/arrow_up" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toTopOf="@+id/expense_value"
+        app:layout_constraintEnd_toStartOf="@+id/expense"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/group_4"
+        app:layout_constraintTop_toTopOf="@+id/group_4"
+        app:layout_constraintVertical_bias="0.585"
+        app:srcCompat="@drawable/arrow_up" />
+
+    <TextView
+        android:id="@+id/expense_value"
+        android:layout_width="103dp"
+        android:layout_height="23dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|top"
+        android:text="@string/expense_value"
+        android:textAppearance="@style/expense_style"
+        app:layout_constraintBottom_toBottomOf="@+id/group_4"
+        app:layout_constraintEnd_toEndOf="@+id/group_4"
+        app:layout_constraintStart_toStartOf="@+id/group_4"
+        app:layout_constraintTop_toBottomOf="@+id/expense" />
+
+    <!-- Budget Left -->
+    <!-- Carefull ! -->
+
+    <View
+        android:id="@+id/group_5"
+        android:layout_width="364dp"
+        android:layout_height="109dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="248dp"
+        android:background="@drawable/layer_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.617"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="45dp"
+        android:layout_height="23dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|top"
+        android:text="@string/total"
+        android:textAppearance="@style/total"
+        app:layout_constraintBottom_toBottomOf="@+id/group_5"
+        app:layout_constraintEnd_toEndOf="@+id/group_5"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="@+id/group_5"
+        app:layout_constraintTop_toTopOf="@+id/group_5"
+        app:layout_constraintVertical_bias="0.174" />
+
+    <!-- Latest Transcation -->
+    <!-- History  -->
+    <!-- Ellipse 1 -->
+
+    <TextView
+        android:id="@+id/remaining_budget"
+        android:layout_width="124dp"
+        android:layout_height="28dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|top"
+        android:text="@string/remaining_budget"
+        android:textAppearance="@style/remaining_bdt_style"
+        app:layout_constraintBottom_toBottomOf="@+id/group_5"
+        app:layout_constraintEnd_toStartOf="@+id/carefull_"
+        app:layout_constraintHorizontal_bias="0.168"
+        app:layout_constraintStart_toStartOf="@+id/group_5"
+        app:layout_constraintTop_toBottomOf="@+id/total"
+        app:layout_constraintVertical_bias="0.418" />
+
+    <TextView
+        android:id="@+id/carefull_"
+        android:layout_width="98dp"
+        android:layout_height="28dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="38dp"
+        android:layout_marginBottom="43dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/warning"
+        android:textAppearance="@style/remaining_bdt_style"
+        app:layout_constraintBottom_toBottomOf="@+id/group_5"
+        app:layout_constraintEnd_toEndOf="@+id/group_5"
+        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintStart_toStartOf="@+id/group_5"
+        app:layout_constraintTop_toTopOf="@+id/group_5" />
+
+    <!-- icon -->
+    <!-- Transaction Name -->
+    <!-- Transaction Date -->
+    <!-- Price- -->
+    <!-- Group 3 -->
+
+    <TextView
+        android:id="@+id/latest_tran"
+        android:layout_width="168dp"
+        android:layout_height="23dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|top"
+        android:text="@string/latest"
+        android:textAppearance="@style/latest_tran"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.123"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.546" />
+
+    <View
+        android:id="@+id/group_2"
+        android:layout_width="355dp"
+        android:layout_height="75dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="116dp"
+        android:background="@drawable/layer_list2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/latest_tran"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/icon"
+        android:layout_width="43dp"
+        android:layout_height="19dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|top"
+        android:text="@string/icon"
+        android:textAppearance="@style/icon"
+        app:layout_constraintBottom_toBottomOf="@+id/group_2"
+        app:layout_constraintEnd_toEndOf="@+id/group_2"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="@+id/group_2"
+        app:layout_constraintTop_toTopOf="@+id/group_2" />
+
+    <TextView
+        android:id="@+id/netflix"
+        android:layout_width="45dp"
+        android:layout_height="18dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|top"
+        android:text="@string/netflix"
+        android:textAppearance="@style/netflix"
+        app:layout_constraintBottom_toBottomOf="@+id/group_2"
+        app:layout_constraintEnd_toEndOf="@+id/group_2"
+        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintStart_toStartOf="@+id/group_2"
+        app:layout_constraintTop_toTopOf="@+id/group_2"
+        app:layout_constraintVertical_bias="0.192" />
+
+    <TextView
+        android:id="@+id/some_id"
+        android:layout_width="41dp"
+        android:layout_height="11dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|top"
+        android:text="@string/date"
+        android:textAppearance="@style/date"
+        app:layout_constraintBottom_toBottomOf="@+id/group_2"
+        app:layout_constraintEnd_toEndOf="@+id/group_2"
+        app:layout_constraintHorizontal_bias="0.254"
+        app:layout_constraintStart_toStartOf="@+id/group_2"
+        app:layout_constraintTop_toTopOf="@+id/group_2"
+        app:layout_constraintVertical_bias="0.734" />
+
+    <TextView
+        android:id="@+id/rp_170_000_"
+        android:layout_width="92dp"
+        android:layout_height="18dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|top"
+        android:text="@string/price"
+        android:textAppearance="@style/price"
+        app:layout_constraintBottom_toBottomOf="@+id/group_2"
+        app:layout_constraintEnd_toEndOf="@+id/group_2"
+        app:layout_constraintHorizontal_bias="0.908"
+        app:layout_constraintStart_toStartOf="@+id/group_2"
+        app:layout_constraintTop_toTopOf="@+id/group_2" />
+
+    <View
+        android:id="@+id/group_3"
+        android:layout_width="355dp"
+        android:layout_height="75dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/layer_list2"
+        app:layout_constraintBottom_toTopOf="@+id/group_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/latest_tran" />
+
+    <TextView
+        android:id="@+id/icon2"
+        android:layout_width="43dp"
+        android:layout_height="19dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|top"
+        android:text="@string/icon"
+        android:textAppearance="@style/icon"
+        app:layout_constraintBottom_toBottomOf="@+id/group_3"
+        app:layout_constraintEnd_toEndOf="@+id/group_3"
+        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintStart_toStartOf="@+id/group_3"
+        app:layout_constraintTop_toTopOf="@+id/group_3" />
+
+    <!-- Home -->
+
+    <TextView
+        android:id="@+id/food"
+        android:layout_width="34dp"
+        android:layout_height="18dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|top"
+        android:text="@string/food"
+        android:textAppearance="@style/netflix"
+        app:layout_constraintBottom_toBottomOf="@+id/group_3"
+        app:layout_constraintEnd_toEndOf="@+id/group_3"
+        app:layout_constraintHorizontal_bias="0.249"
+        app:layout_constraintStart_toStartOf="@+id/group_3"
+        app:layout_constraintTop_toTopOf="@+id/group_3"
+        app:layout_constraintVertical_bias="0.192" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="41dp"
+        android:layout_height="11dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|top"
+        android:text="@string/date"
+        android:textAppearance="@style/date"
+        app:layout_constraintBottom_toBottomOf="@+id/group_3"
+        app:layout_constraintEnd_toEndOf="@+id/group_3"
+        app:layout_constraintHorizontal_bias="0.254"
+        app:layout_constraintStart_toStartOf="@+id/group_3"
+        app:layout_constraintTop_toTopOf="@+id/group_3"
+        app:layout_constraintVertical_bias="0.75" />
+
+    <TextView
+        android:id="@+id/rp_60_000_"
+        android:layout_width="84dp"
+        android:layout_height="18dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|top"
+        android:text="@string/price"
+        android:textAppearance="@style/price"
+        app:layout_constraintBottom_toBottomOf="@+id/group_3"
+        app:layout_constraintEnd_toEndOf="@+id/group_3"
+        app:layout_constraintHorizontal_bias="0.881"
+        app:layout_constraintStart_toStartOf="@+id/group_3"
+        app:layout_constraintTop_toTopOf="@+id/group_3"
+        app:layout_constraintVertical_bias="0.508" />
+
+    <View
+
+        android:id="@+id/group_32"
+        android:layout_width="458dp"
+        android:layout_height="76dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:background="#26547C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"/>
+
+
+    <TextView
+        android:id="@+id/new_transac3"
+        android:layout_width="76dp"
+        android:layout_height="12dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|top"
+        android:text="@string/settings"
+        android:textAppearance="@style/new_transac"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.984" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.732"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.963"
+        app:srcCompat="@drawable/wallet" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.283"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.966"
+        app:srcCompat="@drawable/bookmark"/>
+<!--        android:onClick="goToPlan"-->
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.963"
+        app:srcCompat="@drawable/dashboard"/>
+<!--        android:onClick="goToHome"-->
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.963"
+        app:srcCompat="@drawable/add"
+        android:onClick="alertKonfirmasi"/>
+
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.937"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.963"
+        app:srcCompat="@drawable/settings"/>
+<!--        android:onClick="goToSettings"-->
+
+
+
+    <!-- Group 5 -->
+    <!-- Budget Left -->
+    <!-- Carefull ! -->
+
+    <!-- Latest Transcation -->
+    <!-- History  -->
+    <!-- Ellipse 1 -->
+    <!-- icon -->
+    <!-- Transaction Name -->
+    <!-- Transaction Date -->
+    <!-- Price- -->
+    <!-- Group 3 -->
+
+    <!-- Home -->
+
+    <TextView
+        android:id="@+id/new_transac2"
+        android:layout_width="76dp"
+        android:layout_height="12dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|top"
+        android:text="@string/history"
+        android:textAppearance="@style/new_transac"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.761"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.984" />
+
+    <TextView
+        android:id="@+id/new_transac"
+        android:layout_width="76dp"
+        android:layout_height="12dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|top"
+        android:text="@string/add"
+        android:textAppearance="@style/new_transac"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.981" />
+
+    <TextView
+        android:id="@+id/home2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|top"
+        android:text="@string/myplan"
+        android:textAppearance="@style/home"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.276"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.984" />
+
+    <TextView
+        android:id="@+id/home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|top"
+        android:text="@string/home"
+        android:textAppearance="@style/home"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.984"/>
+<!--        android:onClick="goToHome"-->
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
