@@ -37,15 +37,20 @@ class FragmentLogin : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-//        return inflater.inflate(R.layout.fragment_login, container, false)
         val view = inflater.inflate(R.layout.fragment_login, container, false)
 
         interfaceData = activity as InterfaceData
 
-        val btnLogin = view.findViewById<Button>(R.id.buttonRegister2)
+        val btnLogin = view.findViewById<Button>(R.id.buttonRegisterGoogle2)
         val emailTxt = view.findViewById<EditText>(R.id.editTextTextEmailAddress)
 
-        btnLogin.setOnClickListener { interfaceData.kirimData(emailTxt.text.toString()) }
+        btnLogin.setOnClickListener {
+            Thread(Runnable {
+                Thread.sleep(5000)
+                interfaceData.kirimData(emailTxt.text.toString())
+            }).start()
+        }
+
 
         return  view
     }

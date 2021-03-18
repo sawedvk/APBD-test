@@ -36,15 +36,15 @@ class FragmentHome : Fragment() {
     }
 
 
-    var email : String? = ""
+    var email : String? = "xcvb"
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         val view =  inflater.inflate(R.layout.fragment_home, container, false)
 
-        email = arguments?.getString("Email")
+        email = arguments?.getString("email")
 
-        val emailTxt = view.findViewById<TextView>(R.id.hasilTxt)
+        val emailTxt = view.findViewById<TextView>(R.id.APAPUN)
 
         emailTxt.text = email
 
@@ -52,23 +52,23 @@ class FragmentHome : Fragment() {
 
     }
 
+    fun goToIncome(view: View) {
+        var intentIncome = Intent(getActivity(), income::class.java)
+        getActivity()?.startActivity(intentIncome)
+    }
+    fun goToExpense(view: View) {
+        var intentexpense = Intent(getActivity(), expense::class.java)
+        getActivity()?.startActivity(intentexpense)
+    }
+
     fun alertKonfirmasi(view: View){
-        var dialog = AlertDialog.Builder( this)
+        var dialog = AlertDialog.Builder( activity!!)
                 .setMessage("New Transaction")
                 .setPositiveButton("Income", DialogInterface.OnClickListener{ dialogInterface, i -> goToIncome(view)
                 })
                 .setNegativeButton("Expense", DialogInterface.OnClickListener{ dialogInterface, i -> goToExpense(view)
                 })
         dialog.show()
-    }
-
-    fun goToIncome(view: View) {
-        var intentIncome = Intent(this, income::class.java)
-        startActivity(intentIncome)
-    }
-    fun goToExpense(view: View) {
-        var intentexpense = Intent(this, expense::class.java)
-        startActivity(intentexpense)
     }
 
     companion object {

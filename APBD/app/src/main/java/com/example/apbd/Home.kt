@@ -48,9 +48,9 @@ class Home : AppCompatActivity() {
     fun alertKonfirmasi(view: View){
         var dialog = AlertDialog.Builder( this)
             .setMessage("New Transaction")
-            .setPositiveButton("Income", DialogInterface.OnClickListener{ dialogInterface, i -> goToIncome(view)
+            .setPositiveButton("Income 1", DialogInterface.OnClickListener{ dialogInterface, i -> goToIncome(view)
             })
-            .setNegativeButton("Expense", DialogInterface.OnClickListener{ dialogInterface, i -> goToExpense(view)
+            .setNegativeButton("Expense 1", DialogInterface.OnClickListener{ dialogInterface, i -> goToExpense(view)
             })
         dialog.show()
     }
