@@ -6,7 +6,9 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="baad6870-7167-4603-a893-38d07409df3a" name="Default Changelist" comment="" />
+    <list default="true" id="baad6870-7167-4603-a893-38d07409df3a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,8 +26,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/APBD" />
-    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -45,9 +47,17 @@
       <screen x="62" y="0" width="1474" height="864" />
     </state>
     <state x="0" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/62.0.1474.864@62.0.1474.864" timestamp="1611499824637" />
-    <state x="580" y="187" key="FileChooserDialogImpl" timestamp="1611848922560">
+    <state x="580" y="187" key="FileChooserDialogImpl" timestamp="1616539274597">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state x="580" y="187" key="FileChooserDialogImpl/62.0.1474.864@62.0.1474.864" timestamp="1611848922560" />
+    <state x="580" y="187" key="FileChooserDialogImpl/62.0.1474.864@62.0.1474.864" timestamp="1616539274597" />
+    <state x="468" y="137" width="660" height="590" key="NewModule_or_Project.wizard" timestamp="1616539207153">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="468" y="137" width="660" height="590" key="NewModule_or_Project.wizard/62.0.1474.864@62.0.1474.864" timestamp="1616539207153" />
+    <state x="306" y="77" key="SettingsEditor" timestamp="1616539148925">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="306" y="77" key="SettingsEditor/62.0.1474.864@62.0.1474.864" timestamp="1616539148925" />
   </component>
 </project>

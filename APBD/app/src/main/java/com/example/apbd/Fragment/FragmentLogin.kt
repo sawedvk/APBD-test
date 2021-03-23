@@ -46,7 +46,7 @@ class FragmentLogin : Fragment() {
 
         btnLogin.setOnClickListener {
             Thread(Runnable {
-                Thread.sleep(5000)
+                Thread.sleep(1000)
                 interfaceData.kirimData(emailTxt.text.toString())
             }).start()
         }
