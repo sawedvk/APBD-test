@@ -7,11 +7,28 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.home.*
+import kotlinx.android.synthetic.main.settings_page.*
 
 class Settings : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.settings_page)
+
+        var exportservice = Intent (this,ExportDataService::class.java)
+        exportexcel.setOnClickListener {
+            startService(exportservice)
+        }
+
+        var sendmailservice = Intent (this,SendDataMailService::class.java)
+        sendemail.setOnClickListener {
+            startService(sendmailservice)
+        }
+
+        button3.setOnClickListener {
+            stopService(exportservice)
+            stopService(sendmailservice)
+        }
     }
 
     fun goToBootUp(view: View) {

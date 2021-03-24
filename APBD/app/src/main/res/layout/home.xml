@@ -16,6 +16,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:gravity="center_horizontal|top"
+        android:textAlignment="viewStart"
         android:textAppearance="@style/hai_name_"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

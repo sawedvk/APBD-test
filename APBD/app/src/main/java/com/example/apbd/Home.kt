@@ -15,8 +15,8 @@ class Home : AppCompatActivity() {
         setContentView(R.layout.home)
 
 
-//        var usr:User? = intent.getParcelableExtra<User>(EXTRA_USER)
-//        hai_name_.setText("Hello ${usr?.username} ")
+        var usr:User? = intent.getParcelableExtra<User>(EXTRA_USER)
+        hai_name_.setText("Hello ${usr?.username} ")
 
     }
 
