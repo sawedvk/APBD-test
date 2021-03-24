@@ -5,14 +5,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 
-class Regispage : AppCompatActivity() {
+class ConfirmRegis : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.register_page)
+        setContentView(R.layout.register_otpcode)
     }
 
-    fun goToConfirmRegis(view: View) {
-        var intentConfirmRegis = Intent(this, ConfirmRegis::class.java)
-        startActivity(intentConfirmRegis)
+    fun goToLogin(view: View) {
+        var intentlogin = Intent(this, LoginPage::class.java)
+        startActivity(intentlogin)
     }
 }
