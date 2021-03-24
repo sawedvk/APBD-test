@@ -3,7 +3,8 @@
     package="com.example.apbd">
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,9 +12,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.APBD">
-            android:name=".SendDataMailService"
+        <receiver
+            android:name=".SMSReceiver"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+                <action android:name="android.provider.Telephony.SMS_READ"/>
+            </intent-filter>
+        </receiver>
+
         <service
             android:name=".ExportDataService"
             android:enabled="true"
@@ -37,7 +45,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Regispage" />
-        <activity android:name=".ConfirmRegis"/>
+        <activity android:name=".ConfirmRegis" />
         <activity android:name=".LoginPage" />
     </application>
 
