@@ -3,8 +3,9 @@
     package="com.example.apbd">
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.READ_SMS"/>
-    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,12 +14,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.APBD">
         <receiver
+            android:name=".AirplaneReciever"
+            android:enabled="true"
+            android:exported="true"></receiver>
+        <receiver
             android:name=".SMSReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
-                <action android:name="android.provider.Telephony.SMS_READ"/>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+                <action android:name="android.provider.Telephony.SMS_READ" />
             </intent-filter>
         </receiver>
 

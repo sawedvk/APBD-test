@@ -1,6 +1,7 @@
 package com.example.apbd
 
 import android.content.Intent
+import android.content.IntentFilter
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -11,7 +12,10 @@ class MainActivity : AppCompatActivity(){
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.boot_up)
-
+        var AirRecieve = AirplaneReciever()
+        var filter = IntentFilter()
+        filter.addAction(Intent.ACTION_AIRPLANE_MODE_CHANGED)
+        registerReceiver(AirRecieve,filter)
 
     }
 
