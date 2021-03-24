@@ -12,7 +12,7 @@ class Regispage : AppCompatActivity() {
     }
 
     fun goToConfirmRegis(view: View) {
-        var intentConfirmRegis = Intent(this, ConfirmRegis::class.java)
-        startActivity(intentConfirmRegis)
+        var intentConfirm = Intent(this, ConfirmRegis::class.java)
+        startActivity(intentConfirm)
     }
 }
