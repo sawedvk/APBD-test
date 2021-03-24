@@ -31,6 +31,9 @@
             android:name=".ExportDataService"
             android:enabled="true"
             android:exported="true" />
+        <service android:name=".SendDataMailService"
+            android:enabled="true"
+            android:exported="true"/>
 
         <activity android:name=".Planning" />
         <activity android:name=".customPlanning" />

@@ -20,14 +20,14 @@ class Settings : AppCompatActivity() {
             startService(exportservice)
         }
 
-        var sendmailservice = Intent (this,SendDataMailService::class.java)
+        var sendemailservice = Intent (this,SendDataMailService::class.java)
         sendemail.setOnClickListener {
-            startService(sendmailservice)
+            startService(sendemailservice)
         }
 
         button3.setOnClickListener {
             stopService(exportservice)
-            stopService(sendmailservice)
+            stopService(sendemailservice)
         }
     }
 

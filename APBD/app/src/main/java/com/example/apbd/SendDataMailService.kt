@@ -21,7 +21,7 @@ class SendDataMailService : Service() {
                 }
             stopSelf()
         }).start()
-        return START_STICKY
+        return START_STICKY_COMPATIBILITY
     }
 
     override fun onDestroy() {
