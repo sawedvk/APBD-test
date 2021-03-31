@@ -10,6 +10,7 @@ import android.os.Build
 import android.os.Bundle
 import android.os.SystemClock
 import android.view.View
+import android.widget.RemoteViews
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -21,7 +22,10 @@ import kotlinx.android.synthetic.main.settings_page.*
 class Settings : AppCompatActivity() {
 
     private val Channel_ID = "trial_01"
+    private val CHANNEL_ID = "Custom_Notif"
+
     private val Notif_ID = 100
+    private val NOTIF_ID = 110
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,18 +38,18 @@ class Settings : AppCompatActivity() {
         }
 
 
-
-
-        var sendemailservice = Intent (this,SendDataMailService::class.java)
+//        var sendemailservice = Intent (this,SendDataMailService::class.java)
         sendemail.setOnClickListener {
-            startService(sendemailservice)
+//            startService(sendemailservice)
+            customNotification()
         }
 
-        button3.setOnClickListener {
-            stopService(sendemailservice)
-        }
+//        button3.setOnClickListener {
+//            stopService(sendemailservice)
+//        }
     }
     private  fun createNotificationChannel(){
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
         {
             val name = "Notification Title"
@@ -58,6 +62,21 @@ class Settings : AppCompatActivity() {
             notificationManager.createNotificationChannel(channel)
         }
     }
+
+    private fun customNotification() {
+        val notificationLayout = RemoteViews(packageName,R.layout.custom_notif)
+        val builder = NotificationCompat.Builder(this, CHANNEL_ID)
+                .setSmallIcon(R.drawable.ic_launcher_foreground)
+                .setContentTitle("APBD")
+                .setStyle(NotificationCompat.DecoratedCustomViewStyle())
+                .setCustomContentView(notificationLayout)
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+
+        with(NotificationManagerCompat.from(this)){
+            notify(NOTIF_ID, builder.build())
+        }
+    }
+
     private fun sendNotification() {
 
         val intent = Intent(this, MainActivity::class.java).apply {
