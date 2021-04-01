@@ -10,6 +10,7 @@ import android.os.Build
 import android.os.Bundle
 import android.os.SystemClock
 import android.view.View
+import android.widget.RemoteViews
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -63,6 +64,9 @@ class Settings : AppCompatActivity() {
         val intent = Intent(this, MainActivity::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         }
+
+        val notificationlayout = RemoteViews(packageName,R.layout.custom_notification)
+
         val pendingIntent : PendingIntent = PendingIntent.getActivity(this, 0 ,intent,0 )
 
         val progress_max = 100
@@ -71,11 +75,13 @@ class Settings : AppCompatActivity() {
         val builder = NotificationCompat.Builder(this, Channel_ID)
                 .setSmallIcon(R.drawable.ic_launcher_foreground)
                 .setContentTitle("Downloading Excel")
+                .setStyle(NotificationCompat.DecoratedCustomViewStyle())
+                .setCustomContentView(notificationlayout)
                 .setContentText("Download in progress")
-                .setContentIntent(pendingIntent)
-                .setNumber(1)
+//                .setContentIntent(pendingIntent)
+//                .setNumber(1)
                 .setOnlyAlertOnce(true)
-                .setBadgeIconType(NotificationCompat.BADGE_ICON_LARGE)
+//                .setBadgeIconType(NotificationCompat.BADGE_ICON_LARGE)
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
 
 
