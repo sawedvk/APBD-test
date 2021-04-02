@@ -49,7 +49,7 @@ class Settings : AppCompatActivity() {
     private  fun createNotificationChannel(){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
         {
-            val name = "Notification Title"
+            val name = "Test Channel"
             val desc =" Notification Description"
             val importance = NotificationManager.IMPORTANCE_DEFAULT
             val channel = NotificationChannel(Channel_ID,name,importance).apply {
@@ -61,7 +61,11 @@ class Settings : AppCompatActivity() {
     }
     private fun sendNotification() {
 
-        val intent = Intent(this, MainActivity::class.java).apply {
+        val intent = Intent(this, Settings::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        }
+
+        val Hideintent = Intent(this, MainActivity::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         }
 
@@ -78,11 +82,12 @@ class Settings : AppCompatActivity() {
                 .setStyle(NotificationCompat.DecoratedCustomViewStyle())
                 .setCustomContentView(notificationlayout)
                 .setContentText("Download in progress")
-//                .setContentIntent(pendingIntent)
-//                .setNumber(1)
+                .setContentIntent(pendingIntent)
+                .setNumber(1)
                 .setOnlyAlertOnce(true)
-//                .setBadgeIconType(NotificationCompat.BADGE_ICON_LARGE)
-                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                .addAction(R.drawable.ic_hide, "Open ", pendingIntent)
+                .setBadgeIconType(NotificationCompat.BADGE_ICON_LARGE)
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
 
 
         with(NotificationManagerCompat.from(this).apply {
