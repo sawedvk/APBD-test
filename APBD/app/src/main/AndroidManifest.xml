@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.apbd">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
@@ -14,9 +15,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.APBD">
         <receiver
-            android:name=".AirplaneReciever"
+            android:name=".MyReceiverAlarm"
             android:enabled="true"
             android:exported="true"></receiver>
+
+        <activity android:name=".Memes" />
+
+        <receiver
+            android:name=".AirplaneReciever"
+            android:enabled="true"
+            android:exported="true" />
         <receiver
             android:name=".SMSReceiver"
             android:enabled="true"
@@ -28,12 +36,18 @@
         </receiver>
 
         <service
+            android:name=".jobScheduler.MemeScheduler"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
             android:name=".ExportDataService"
             android:enabled="true"
             android:exported="true" />
-        <service android:name=".SendDataMailService"
+        <service
+            android:name=".SendDataMailService"
             android:enabled="true"
-            android:exported="true"/>
+            android:exported="true" />
 
         <activity android:name=".Planning" />
         <activity android:name=".customPlanning" />
