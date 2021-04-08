@@ -10,7 +10,6 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import java.util.*
 
 class expense : AppCompatActivity() {
 
@@ -23,14 +22,8 @@ class expense : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.expense)
 
-        mAlarmManager=getSystemService(Context.ALARM_SERVICE) as AlarmManager
-
-        var alarmTimer = Calendar.getInstance()
-        alarmTimer.add(Calendar.SECOND, 20)
-        var sendIntent = Intent(this,MyReceiverAlarm::class.java)
-        mPendingIntent = PendingIntent.getBroadcast(this,101,sendIntent,0)
-        mAlarmManager?.set(AlarmManager.RTC,alarmTimer.timeInMillis,mPendingIntent)
-
+        mAlarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
+    }
         fun goToHome(view: View) {
             var intenthome = Intent(this,Home::class.java)
             startActivity(intenthome)
@@ -39,16 +32,22 @@ class expense : AppCompatActivity() {
         fun alertKonfirmasi(view: View) {
             var dialog = AlertDialog.Builder(this)
                 .setMessage("You Almost Exceeded Your Plan!")
-                .setPositiveButton("Save", DialogInterface.OnClickListener{ dialogInterface, i -> goToHome(view)
+                .setPositiveButton("Save", DialogInterface.OnClickListener{ dialogInterface, i ->
+//                    var alarmTimer = Calendar.getInstance()
+//                    alarmTimer.add(Calendar.SECOND, 20)
+//                    var sendIntent = Intent(this, MyReceiverAlarm::class.java)
+//                    mPendingIntent = PendingIntent.getBroadcast(this, 101, sendIntent, 0)
+//                    mAlarmManager?.set(AlarmManager.RTC, alarmTimer.timeInMillis, mPendingIntent)
+                    goToHome(view)
                 })
                 .setNegativeButton("Cancel", DialogInterface.OnClickListener{ dialogInterface, i ->
-                    if (mPendingIntent!=null){
-                        mAlarmManager?.cancel(mPendingIntent)
-                        mPendingIntent?.cancel()
-                    }
+//                    if (mPendingIntent!=null){
+//                        mAlarmManager?.cancel(mPendingIntent)
+//                        mPendingIntent?.cancel()
+//                    }
                     Toast.makeText(this,"CANCEL", Toast.LENGTH_LONG).show()
                 })
             dialog.show()
         }
-    }
+
 }

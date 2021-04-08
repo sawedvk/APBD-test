@@ -1,5 +1,6 @@
 package com.example.apbd
 
+import android.app.AlarmManager
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
@@ -18,15 +19,21 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import kotlinx.android.synthetic.main.home.*
 import kotlinx.android.synthetic.main.settings_page.*
+import java.util.*
 
 class Settings : AppCompatActivity() {
 
     private val Channel_ID = "trial_01"
     private val Notif_ID = 100
 
+    var mAlarmManager: AlarmManager?=null
+    var mPendingIntent: PendingIntent?=null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.settings_page)
+
+        mAlarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
 
         createNotificationChannel()
 
@@ -132,6 +139,11 @@ class Settings : AppCompatActivity() {
         startActivity(intenthome)
     }
     fun goToPlan(view: View) {
+        var alarmTimer = Calendar.getInstance()
+        alarmTimer.add(Calendar.SECOND, 5)
+        var sendIntent = Intent(this, MyReceiverAlarm::class.java)
+        mPendingIntent = PendingIntent.getBroadcast(this, 101, sendIntent, 0)
+        mAlarmManager?.set(AlarmManager.RTC, alarmTimer.timeInMillis, mPendingIntent)
         var intenPlan = Intent(this,Planning::class.java)
         startActivity(intenPlan)
     }

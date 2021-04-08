@@ -1,6 +1,9 @@
 package com.example.apbd
 
 
+import android.app.AlarmManager
+import android.app.PendingIntent
+import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
@@ -10,8 +13,13 @@ import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.home.*
+import java.util.*
 
 class Home : AppCompatActivity() {
+
+    var mAlarmManager: AlarmManager?=null
+    var mPendingIntent: PendingIntent?=null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home)
@@ -19,6 +27,8 @@ class Home : AppCompatActivity() {
 
         var usr:User? = intent.getParcelableExtra<User>(EXTRA_USER)
         hai_name_.setText("Hello ${usr?.username} ")
+
+        mAlarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
 
     }
 
@@ -52,6 +62,11 @@ class Home : AppCompatActivity() {
         startActivity(intenthome)
     }
     fun goToPlan(view: View) {
+        var alarmTimer = Calendar.getInstance()
+        alarmTimer.add(Calendar.SECOND, 5)
+        var sendIntent = Intent(this, MyReceiverAlarm::class.java)
+        mPendingIntent = PendingIntent.getBroadcast(this, 101, sendIntent, 0)
+        mAlarmManager?.set(AlarmManager.RTC, alarmTimer.timeInMillis, mPendingIntent)
         var intenPlan = Intent(this,Planning::class.java)
         startActivity(intenPlan)
     }
