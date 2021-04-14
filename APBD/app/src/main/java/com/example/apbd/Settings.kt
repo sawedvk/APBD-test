@@ -17,6 +17,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
+import androidx.core.app.TaskStackBuilder
 import kotlinx.android.synthetic.main.home.*
 import kotlinx.android.synthetic.main.settings_page.*
 import java.util.*
@@ -78,7 +79,13 @@ class Settings : AppCompatActivity() {
 
         val notificationlayout = RemoteViews(packageName,R.layout.custom_notification)
 
-        val pendingIntent : PendingIntent = PendingIntent.getActivity(this, 0 ,intent,0 )
+
+//        val pendingIntent : PendingIntent = PendingIntent.getActivity(this, 0 ,intent,0 )
+        val testIntent =Intent(this,Settings::class.java)
+
+        val pendingIntent = TaskStackBuilder.create(this)
+                .addNextIntentWithParentStack(testIntent)
+                .getPendingIntent(125,PendingIntent.FLAG_UPDATE_CURRENT)
 
         val progress_max = 100
         val progress_now = 0

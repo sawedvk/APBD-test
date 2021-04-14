@@ -51,7 +51,9 @@
 
         <activity android:name=".Planning" />
         <activity android:name=".customPlanning" />
-        <activity android:name=".Settings" />
+        <activity android:name=".Settings"
+            android:parentActivityName=".Home"/>
+
         <activity android:name=".LogoutPage" />
         <activity
             android:name=".Home"
