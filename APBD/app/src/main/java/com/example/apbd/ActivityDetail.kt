@@ -12,11 +12,9 @@ import kotlinx.android.synthetic.main.activity_detail.*
 
 class ActivityDetail : AppCompatActivity(), LoaderManager.LoaderCallbacks<Cursor>
 {
-//    var contactId = ContactsContract.RawContacts.CONTACT_ID
-
+    var contactId = ContactsContract.RawContacts.CONTACT_ID
     var DisplayName = ContactsContract.Contacts.DISPLAY_NAME
     var Number = ContactsContract.CommonDataKinds.Phone.NUMBER
-//    var Email = ContactsContract.CommonDataKinds.Email.ADDRESS
 
     var myListContact : MutableList<myContact> = ArrayList()
 
@@ -29,12 +27,8 @@ class ActivityDetail : AppCompatActivity(), LoaderManager.LoaderCallbacks<Cursor
 
     override fun onCreateLoader(id: Int, args: Bundle?): Loader<Cursor> {
         val myContactUri = ContactsContract.CommonDataKinds.Phone.CONTENT_URI
-//        var emailUri = ContactsContract.CommonDataKinds.Email.CONTENT_URI
-//        var emailProjection = arrayOf(ContactsContract.CommonDataKinds.Email.DATA,ContactsContract.CommonDataKinds.Email.TYPE)
-//        return CursorLoader(this,emailUri,emailProjection,ContactsContract.Data.CONTACT_ID + "=?",
-//            arrayOf(contactId),null)
 
-        var myProjection = arrayOf(DisplayName,Number)
+        var myProjection = arrayOf(contactId,DisplayName,Number)
 
         return CursorLoader(this,myContactUri,myProjection,null,null,"$DisplayName ASC")
     }
@@ -47,7 +41,7 @@ class ActivityDetail : AppCompatActivity(), LoaderManager.LoaderCallbacks<Cursor
                 myListContact.add(
                     myContact(
                         data.getString(data.getColumnIndex(DisplayName)),
-                        "",
+                        getUserContactEmail(data.getString(data.getColumnIndex(contactId)))!!,
                         data.getString(data.getColumnIndex(Number))
                     )
                 )
@@ -65,10 +59,28 @@ class ActivityDetail : AppCompatActivity(), LoaderManager.LoaderCallbacks<Cursor
         myRecycleView.adapter?.notifyDataSetChanged()
     }
 
-//    fun getEmailbyId(contactId:String) : String?{
-//        var email = ""
-//        LoaderManager.getInstance(this).initLoader(2,null,this)
-//
-//        return email
-//    }
+    private fun getUserContactEmail(contactId: String) : String? {
+        val projection = arrayOf(ContactsContract.CommonDataKinds.Email.DATA, ContactsContract.CommonDataKinds.Email.TYPE)
+
+        var email = ""
+        val data = this.contentResolver.query(
+            ContactsContract.CommonDataKinds.Email.CONTENT_URI,
+            projection,
+            ContactsContract.Data.CONTACT_ID + "=?",
+            arrayOf(contactId),
+            null
+        )
+
+        if (data != null) {
+            data.moveToFirst()
+            val EmailColumnIndex = data.getColumnIndex(ContactsContract.CommonDataKinds.Email.DATA)
+            while (!data.isAfterLast) {
+                email =  data.getString(EmailColumnIndex)
+                data.moveToNext()
+            }
+        }
+        data?.close()
+
+        return email
+    }
 }
