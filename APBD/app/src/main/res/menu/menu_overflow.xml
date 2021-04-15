@@ -4,4 +4,7 @@
         android:id="@+id/memes"
         android:title="See Some Crazy Memes"
         />
+    <item
+        android:id="@+id/Contact"
+        android:title="Contact"/>
 </menu>

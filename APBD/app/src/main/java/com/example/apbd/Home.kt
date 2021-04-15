@@ -34,8 +34,12 @@ class Home : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
-            R.id.memes -> {
-                val intent = Intent(this, Memes::class.java)
+//            R.id.memes -> {
+//                val intent = Intent(this, Memes::class.java)
+//                startActivity(intent)
+//            }
+            R.id.Contact -> {
+                val intent = Intent(this,ActivityDetail::class.java)
                 startActivity(intent)
             }
         }
