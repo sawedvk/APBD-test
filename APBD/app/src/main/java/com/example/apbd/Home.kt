@@ -42,6 +42,10 @@ class Home : AppCompatActivity() {
                 val intent = Intent(this,ActivityDetail::class.java)
                 startActivity(intent)
             }
+            R.id.Calculate -> {
+                val intent = Intent(this,calculate::class.java)
+                startActivity(intent)
+            }
         }
         return true
     }
