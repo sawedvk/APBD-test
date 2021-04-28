@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="#06D6A0"
     tools:context=".Home"
+    android:id="@+id/Home"
     tools:ignore="MissingDefaultResource"
     >
 
@@ -16,7 +17,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:gravity="center_horizontal|top"
-        android:textAlignment="viewStart"
+        android:textAlignment="center"
         android:textAppearance="@style/hai_name_"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
