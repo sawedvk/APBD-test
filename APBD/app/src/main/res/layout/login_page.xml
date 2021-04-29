@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#06D6A0"
-    tools:context=".LoginPage">
+    tools:context=".LoginPage"
+    android:id="@+id/Login">
 
 <!--    <FrameLayout-->
 <!--        android:id="@+id/fragmentContainer"-->
