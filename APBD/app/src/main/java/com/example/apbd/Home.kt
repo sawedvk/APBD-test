@@ -7,6 +7,7 @@ import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -20,10 +21,21 @@ class Home : AppCompatActivity() {
     var mAlarmManager: AlarmManager?=null
     var mPendingIntent: PendingIntent?=null
 
+//    fun goToHome1(view: View) {
+//        var intenthome = Intent(this,Home::class.java)
+//        startActivity(intenthome)
+//    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home)
 
+        Gotohome.setOnClickListener {
+            var intenthome = Intent(this,Home::class.java)
+            startActivity(intenthome)
+        }
+
+        Log.i("HOME","HomeCreated")
 
         var usr:User? = intent.getParcelableExtra<User>(EXTRA_USER)
         hai_name_.setText("Hello ${usr?.username} ")
@@ -65,10 +77,7 @@ class Home : AppCompatActivity() {
         var intentexpense = Intent(this, expense::class.java)
         startActivity(intentexpense)
     }
-    fun goToHome(view: View) {
-        var intenthome = Intent(this,Home::class.java)
-        startActivity(intenthome)
-    }
+
     fun goToPlan(view: View) {
         var alarmTimer = Calendar.getInstance()
         alarmTimer.add(Calendar.SECOND, 5)

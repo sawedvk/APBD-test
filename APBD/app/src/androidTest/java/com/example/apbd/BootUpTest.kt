@@ -17,12 +17,13 @@ class BootUpTest{
 
     var activityTestRule = ActivityTestRule(MainActivity::class.java)
 
+// Test 5
     @Test
     fun openLogin(){
         onView(withId(R.id.buttonLogin)).perform(ViewActions.click())
         onView(withId(R.id.Login)).check(matches(isDisplayed()))
     }
-
+// Test 6
     @Test
     fun openRegister(){
         onView(withId(R.id.buttonRegister)).perform(ViewActions.click())

@@ -19,6 +19,7 @@ class RegisterCheck(){
 
     var activityTestRule = ActivityTestRule(ConfirmRegis::class.java)
 
+// Test 8
     @Test
     fun clickConfirmRegister (){
         onView(withId(R.id.editTextNumber6)).perform(ViewActions.typeText("1234"))

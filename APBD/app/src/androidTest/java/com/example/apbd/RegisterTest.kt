@@ -18,6 +18,7 @@ class RegisterUser{
 
     var activityTestRule = ActivityTestRule(Regispage::class.java)
 
+// Test 9
     @Test
     fun clickRegister (){
         onView(withId(R.id.editTextTextEmailAddress)).perform(ViewActions.typeText("test@gmail.com"))

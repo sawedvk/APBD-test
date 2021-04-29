@@ -18,6 +18,7 @@ class UserLogin{
 
     var activityTestRule = ActivityTestRule(LoginPage::class.java)
 
+    // Test 10
     @Test
     fun clickLogin (){
         onView(withId(R.id.editTextTextEmailAddress)).perform(ViewActions.typeText("test@gmail.com"))
@@ -25,6 +26,6 @@ class UserLogin{
         onView(withId(R.id.buttonRegisterGoogle2)).perform(ViewActions.click())
 
 
-        onView(withId(R.id.Home)).check(matches(isDisplayed()))
+        onView(withId(R.id.home_activity)).check(matches(isDisplayed()))
     }
 }
