@@ -13,18 +13,17 @@ import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
-class RegisterUser{
+
+class RegisterCheck(){
     @Rule @JvmField
 
-    var activityTestRule = ActivityTestRule(Regispage::class.java)
+    var activityTestRule = ActivityTestRule(ConfirmRegis::class.java)
 
     @Test
-    fun clickRegister (){
-        onView(withId(R.id.editTextTextEmailAddress)).perform(ViewActions.typeText("test@gmail.com"))
-        onView(withId(R.id.editTextTextPassword)).perform(ViewActions.typeText("1234"), ViewActions.closeSoftKeyboard())
-        onView(withId(R.id.buttonRegister2)).perform(ViewActions.click())
+    fun clickConfirmRegister (){
+        onView(withId(R.id.editTextNumber6)).perform(ViewActions.typeText("1234"))
 
-
-        onView(withId(R.id.ConfirmRegis)).check(matches(isDisplayed()))
+        onView(withId(R.id.buttonRegister3)).perform(ViewActions.click())
+        onView(withId(R.id.Login)).check(matches(isDisplayed()))
     }
 }
