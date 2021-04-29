@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#06D6A0"
-    tools:context=".history">
+    tools:context=".history"
+    android:id="@+id/historylayout">
 
     <Button
         android:id="@+id/button5"
