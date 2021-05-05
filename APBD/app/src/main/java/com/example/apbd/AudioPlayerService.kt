@@ -35,7 +35,7 @@ class AudioPlayerService : Service(),
                     if (!myMediaPlayer!!.isPlaying) {
                         myMediaPlayer?.run {
                             reset()
-                            setDataSource("https://fileserver.louisaldorio.site/audio/音闕詩聽–芒種-MangZhong-120900498.mp3")
+                            setDataSource("https://pl.meln.top/mr/2646b2209b0d46a2ba8d6ae033bef29f.mp3?session_key=cdd150fee4c52e2dd773e8279219d523")
                             prepareAsync()
                         }
                     }
