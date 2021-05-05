@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_media_player.*
 
-var myIntentService : Intent? = null
+var IntentMediaService : Intent? = null
 class MediaPlayer : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,21 +13,21 @@ class MediaPlayer : AppCompatActivity() {
         setContentView(R.layout.activity_media_player)
 
         PlayButton.setOnClickListener {
-            myIntentService?.setAction(ACTION_PLAY)
-            startService(myIntentService)
+            IntentMediaService?.setAction(ACTION_PLAY)
+            startService(IntentMediaService)
         }
         StopButton.setOnClickListener {
-            myIntentService?.setAction(ACTION_STOP)
-            startService(myIntentService)
+            IntentMediaService?.setAction(ACTION_STOP)
+            startService(IntentMediaService)
         }
     }
 
     override fun onStart() {
         super.onStart()
-        if(myIntentService==null){
-            myIntentService = Intent(this,AudioPlayerService::class.java)
-            myIntentService?.setAction(ACTION_CREATE)
-            startService(myIntentService)
+        if(IntentMediaService==null){
+            IntentMediaService = Intent(this,AudioPlayerService::class.java)
+            IntentMediaService?.setAction(ACTION_CREATE)
+            startService(IntentMediaService)
         }
     }
 }

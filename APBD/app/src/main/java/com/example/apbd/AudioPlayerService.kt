@@ -4,6 +4,7 @@ import android.app.Service
 import android.content.Intent
 import android.media.MediaPlayer
 import android.os.IBinder
+import android.provider.MediaStore
 import android.widget.Toast
 
 const val ACTION_PLAY = "PLAY"
@@ -15,11 +16,11 @@ class AudioPlayerService : Service(),
     MediaPlayer.OnErrorListener,
     MediaPlayer.OnCompletionListener {
 
-    private var myMediaPlayer: MediaPlayer? = null
+    private var AudioPlayer: MediaPlayer? = null
     fun init() {
-        myMediaPlayer = MediaPlayer()
-        myMediaPlayer?.setOnPreparedListener(this)
-        myMediaPlayer?.setOnCompletionListener(this)
+        AudioPlayer = MediaPlayer()
+        AudioPlayer?.setOnPreparedListener(this)
+        AudioPlayer?.setOnCompletionListener(this)
     }
 
     override fun onBind(intent: Intent): IBinder? {
@@ -32,22 +33,22 @@ class AudioPlayerService : Service(),
             when (actionIntent) {
                 ACTION_CREATE -> init()
                 ACTION_PLAY -> {
-                    if (!myMediaPlayer!!.isPlaying) {
-                        myMediaPlayer?.run {
+                    if (!AudioPlayer!!.isPlaying) {
+                        AudioPlayer?.run {
                             reset()
                             setDataSource("https://pl.meln.top/mr/2646b2209b0d46a2ba8d6ae033bef29f.mp3?session_key=cdd150fee4c52e2dd773e8279219d523")
                             prepareAsync()
                         }
                     }
                 }
-                ACTION_STOP -> myMediaPlayer?.stop()
+                ACTION_STOP -> AudioPlayer?.stop()
             }
         }
         return flags
     }
 
     override fun onPrepared(p0: MediaPlayer?) {
-        myMediaPlayer?.start()
+        AudioPlayer?.start()
     }
 
     override fun onError(p0: MediaPlayer?, p1: Int, p2: Int): Boolean {
@@ -61,6 +62,6 @@ class AudioPlayerService : Service(),
 
     override fun onDestroy() {
         super.onDestroy()
-        myMediaPlayer?.release()
+        AudioPlayer?.release()
     }
 }
