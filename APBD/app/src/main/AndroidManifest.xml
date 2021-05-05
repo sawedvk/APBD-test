@@ -15,10 +15,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.APBD">
-        <activity android:name=".calculate"></activity>
+        <service
+            android:name=".AudioPlayerService"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <activity android:name=".MediaPlayer" />
+        <activity android:name=".calculate" />
         <activity
             android:name=".ActivityDetail"
-            android:parentActivityName=".Home"></activity>
+            android:parentActivityName=".Home" />
 
         <receiver
             android:name=".MyReceiverAlarm"

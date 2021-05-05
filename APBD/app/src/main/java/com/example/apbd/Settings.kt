@@ -7,6 +7,8 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
+import android.media.AudioManager
+import android.media.SoundPool
 import android.os.Build
 import android.os.Bundle
 import android.os.SystemClock
@@ -22,7 +24,46 @@ import kotlinx.android.synthetic.main.home.*
 import kotlinx.android.synthetic.main.settings_page.*
 import java.util.*
 
+private var sp : SoundPool? = null
+private var ButtonSaveSoundID = 0
+private var ButtonCancelSoundID = 0
+
 class Settings : AppCompatActivity() {
+
+    override fun onStart() {
+        super.onStart()
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+            createNewSoundPool()
+        }
+        else{
+            createOldSoundPool()
+        }
+        sp?.setOnLoadCompleteListener { soundPool, id, status ->
+            if(status != 0){
+                Toast.makeText(this,"Gagal Load",Toast.LENGTH_SHORT).show()
+            }
+            else{
+                Toast.makeText(this,"Load Berhasil",Toast.LENGTH_SHORT).show()
+            }
+        }
+        ButtonSaveSoundID = sp?.load(this, R.raw.sound1,1) ?: 0
+        ButtonCancelSoundID = sp?.load(this, R.raw.sound2,1) ?: 0
+    }
+
+    override fun onStop() {
+        super.onStop()
+        sp?.release()
+        sp = null
+    }
+
+
+    private fun createOldSoundPool() {
+        sp = SoundPool(15, AudioManager.STREAM_MUSIC, 0)
+    }
+
+    private fun createNewSoundPool() {
+        sp = SoundPool.Builder().setMaxStreams(15).build()
+    }
 
     private val Channel_ID = "trial_01"
     private val Notif_ID = 100
@@ -43,7 +84,11 @@ class Settings : AppCompatActivity() {
         }
 
 
-
+        button2.setOnClickListener{
+            if(ButtonSaveSoundID != 0){
+                sp?.play(ButtonSaveSoundID,0.99f,0.99f,1,0,0.99f)
+            }
+        }
 
         var sendemailservice = Intent (this,SendDataMailService::class.java)
         sendemail.setOnClickListener {
@@ -52,6 +97,9 @@ class Settings : AppCompatActivity() {
 
         button3.setOnClickListener {
             stopService(sendemailservice)
+            if(ButtonCancelSoundID != 0){
+                sp?.play(ButtonCancelSoundID,0.99f,0.99f,1,0,0.99f)
+            }
         }
     }
     private  fun createNotificationChannel(){
@@ -72,6 +120,7 @@ class Settings : AppCompatActivity() {
         val intent = Intent(this, Settings::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         }
+
 
         val Hideintent = Intent(this, MainActivity::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
