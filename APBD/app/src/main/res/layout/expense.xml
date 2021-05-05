@@ -107,10 +107,10 @@
         android:text="Description"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintHorizontal_bias="0.888"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.223" />
+        app:layout_constraintVertical_bias="0.234" />
 
     <ImageButton
         android:id="@+id/imageButton11"
@@ -243,10 +243,10 @@
         android:inputType="date"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.796"
+        app:layout_constraintHorizontal_bias="0.888"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.125" />
+        app:layout_constraintVertical_bias="0.129" />
 
     <ImageButton
         android:id="@+id/imageButton10"
@@ -389,7 +389,7 @@
         app:layout_constraintHorizontal_bias="0.114"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.238"
+        app:layout_constraintVertical_bias="0.237"
         tools:fontFamily="@font/roboto_bold" />
 
     <TextView
