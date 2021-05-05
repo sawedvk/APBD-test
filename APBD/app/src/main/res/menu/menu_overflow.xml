@@ -10,4 +10,7 @@
     <item
         android:id="@+id/Calculate"
         android:title="Try To Calculate"/>
+    <item
+        android:id="@+id/MediaPlayer"
+        android:title="Try To MediaPlayer"/>
 </menu>

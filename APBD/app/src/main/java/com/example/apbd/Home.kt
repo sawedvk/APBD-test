@@ -6,6 +6,7 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
+import com.example.apbd.MediaPlayer
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
@@ -56,6 +57,10 @@ class Home : AppCompatActivity() {
             }
             R.id.Calculate -> {
                 val intent = Intent(this,calculate::class.java)
+                startActivity(intent)
+            }
+            R.id.MediaPlayer -> {
+                val intent = Intent(this, MediaPlayer::class.java)
                 startActivity(intent)
             }
         }
