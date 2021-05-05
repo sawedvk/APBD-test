@@ -14,9 +14,11 @@ import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.home.*
+import org.jetbrains.anko.share
 import java.util.*
 
 class Home : AppCompatActivity() {
+    val sharestuff = SharedPref(this, "itemData")
 
     var mAlarmManager: AlarmManager?=null
     var mPendingIntent: PendingIntent?=null
@@ -41,6 +43,10 @@ class Home : AppCompatActivity() {
         hai_name_.setText("Hello ${usr?.username} ")
 
         mAlarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
+
+        item_Date.text = sharestuff.getDate()
+        item_Name.text = sharestuff.getProduct()
+        item_Price.text = sharestuff.getPrice().toString()
 
     }
 

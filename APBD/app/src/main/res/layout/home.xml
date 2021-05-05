@@ -273,90 +273,15 @@
         app:layout_constraintVertical_bias="0.546" />
 
     <View
-        android:id="@+id/group_2"
-        android:layout_width="355dp"
-        android:layout_height="75dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="116dp"
-        android:background="@drawable/layer_list2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/latest_tran"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/icon"
-        android:layout_width="43dp"
-        android:layout_height="19dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:gravity="center_horizontal|top"
-        android:text="@string/icon"
-        android:textAppearance="@style/icon"
-        app:layout_constraintBottom_toBottomOf="@+id/group_2"
-        app:layout_constraintEnd_toEndOf="@+id/group_2"
-        app:layout_constraintHorizontal_bias="0.07"
-        app:layout_constraintStart_toStartOf="@+id/group_2"
-        app:layout_constraintTop_toTopOf="@+id/group_2" />
-
-    <TextView
-        android:id="@+id/netflix"
-        android:layout_width="45dp"
-        android:layout_height="18dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:gravity="center_horizontal|top"
-        android:text="@string/netflix"
-        android:textAppearance="@style/netflix"
-        app:layout_constraintBottom_toBottomOf="@+id/group_2"
-        app:layout_constraintEnd_toEndOf="@+id/group_2"
-        app:layout_constraintHorizontal_bias="0.258"
-        app:layout_constraintStart_toStartOf="@+id/group_2"
-        app:layout_constraintTop_toTopOf="@+id/group_2"
-        app:layout_constraintVertical_bias="0.192" />
-
-    <TextView
-        android:id="@+id/some_id"
-        android:layout_width="41dp"
-        android:layout_height="11dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:gravity="center_horizontal|top"
-        android:text="@string/date"
-        android:textAppearance="@style/date"
-        app:layout_constraintBottom_toBottomOf="@+id/group_2"
-        app:layout_constraintEnd_toEndOf="@+id/group_2"
-        app:layout_constraintHorizontal_bias="0.254"
-        app:layout_constraintStart_toStartOf="@+id/group_2"
-        app:layout_constraintTop_toTopOf="@+id/group_2"
-        app:layout_constraintVertical_bias="0.734" />
-
-    <TextView
-        android:id="@+id/rp_170_000_"
-        android:layout_width="92dp"
-        android:layout_height="18dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:gravity="center_horizontal|top"
-        android:text="@string/price"
-        android:textAppearance="@style/price"
-        app:layout_constraintBottom_toBottomOf="@+id/group_2"
-        app:layout_constraintEnd_toEndOf="@+id/group_2"
-        app:layout_constraintHorizontal_bias="0.908"
-        app:layout_constraintStart_toStartOf="@+id/group_2"
-        app:layout_constraintTop_toTopOf="@+id/group_2" />
-
-    <View
         android:id="@+id/group_3"
         android:layout_width="355dp"
         android:layout_height="75dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:layout_marginTop="28dp"
         android:background="@drawable/layer_list2"
-        app:layout_constraintBottom_toTopOf="@+id/group_2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/latest_tran" />
 
@@ -378,9 +303,9 @@
     <!-- Home -->
 
     <TextView
-        android:id="@+id/food"
-        android:layout_width="34dp"
-        android:layout_height="18dp"
+        android:id="@+id/item_Name"
+        android:layout_width="75dp"
+        android:layout_height="17dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:gravity="center_horizontal|top"
@@ -394,7 +319,7 @@
         app:layout_constraintVertical_bias="0.192" />
 
     <TextView
-        android:id="@+id/date"
+        android:id="@+id/item_Date"
         android:layout_width="41dp"
         android:layout_height="11dp"
         android:layout_alignParentLeft="true"
@@ -410,7 +335,7 @@
         app:layout_constraintVertical_bias="0.75" />
 
     <TextView
-        android:id="@+id/rp_60_000_"
+        android:id="@+id/item_Price"
         android:layout_width="84dp"
         android:layout_height="18dp"
         android:layout_alignParentLeft="true"

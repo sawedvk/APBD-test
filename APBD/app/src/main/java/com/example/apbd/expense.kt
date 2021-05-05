@@ -10,7 +10,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-
+import kotlinx.android.synthetic.main.expense.*
 class expense : AppCompatActivity() {
 
     var mAlarmManager:AlarmManager?=null
@@ -48,6 +48,12 @@ class expense : AppCompatActivity() {
                     Toast.makeText(this,"CANCEL", Toast.LENGTH_LONG).show()
                 })
             dialog.show()
+            val sharestuff = SharedPref(this, "itemData")
+
+            sharestuff.setDate(editTextDate.text.toString())
+            sharestuff.setProduct(Description.text.toString())
+            sharestuff.setPrice(Amount.text.toString().toInt())
         }
+
 
 }
