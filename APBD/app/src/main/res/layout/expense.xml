@@ -436,4 +436,18 @@
         app:layout_constraintVertical_bias="0.851"
         tools:cornerRadius="20"
         android:onClick="alertKonfirmasi"/>
+
+    <Button
+        android:id="@+id/recovery"
+        android:layout_width="160dp"
+        android:layout_height="52dp"
+        android:backgroundTint="#06D6A0"
+        android:text="Recovery"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.927"
+        tools:cornerRadius="20" />
 </androidx.constraintlayout.widget.ConstraintLayout>
