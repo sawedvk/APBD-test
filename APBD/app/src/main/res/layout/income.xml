@@ -9,6 +9,20 @@
 
     >
 
+    <Button
+        android:id="@+id/buttonRecovery"
+        android:layout_width="160dp"
+        android:layout_height="52dp"
+        android:backgroundTint="#06D6A0"
+        android:text="Recovery"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.93"
+        tools:cornerRadius="20" />
+
     <ImageButton
         android:id="@+id/imageButton5"
         android:layout_width="64dp"
@@ -236,5 +250,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.854"
         tools:cornerRadius="20"
-        android:onClick="alertKonfirmasi"/>
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

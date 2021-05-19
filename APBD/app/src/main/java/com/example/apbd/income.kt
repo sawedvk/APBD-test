@@ -19,33 +19,25 @@ import java.util.jar.Manifest
 
 class income : AppCompatActivity() {
 
-    override fun onDestroy() {
-        super.onDestroy()
-
-        writeFileExternal()
-    }
-
     private fun writeFileExternal() {
-//        var total = "${::IncomeDescription.name}:${IncomeDescription.text}\n${::IncomeAmount.name}:${IncomeAmount.text}"
         var myDir = File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)?.toURI())
         if (!myDir.exists()) {
             myDir.mkdir()
         }
-        File(myDir, "Income.txt").apply {
-            writeText(IncomeDescription.text.toString())
+        File(myDir, "${IncomeDescription.text}.txt").apply {
             writeText(IncomeAmount.text.toString())
         }
-        IncomeDescription.text.clear()
+        IncomeAmount.text.clear()
     }
 
     private fun readFileExternal() {
         var myDir = File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)?.toURI())
-        IncomeDescription.text.clear()
+        IncomeAmount.text.clear()
         var readFile = ""
-        File(myDir,"Income.txt").bufferedReader().useLines {
+        File(myDir,"${IncomeDescription.text}.txt").forEachLine {
             readFile += "$it\n"
         }
-        IncomeDescription.setText(readFile)
+        IncomeAmount.setText(readFile)
 
     }
 
@@ -88,7 +80,14 @@ class income : AppCompatActivity() {
                 writeFileExternal()
             }
         }
+
+        buttonRecovery.setOnClickListener {
+            if(isExternalStorageReadable()){
+                readFileExternal()
+            }
+        }
     }
+
 
     fun goToHome(view: View) {
         var intenthome = Intent(this,Home::class.java)
