@@ -11,8 +11,8 @@ class Regispage : AppCompatActivity() {
         setContentView(R.layout.register_page)
     }
 
-    fun goToLogin(view: View) {
-        var intentRegis = Intent(this, LoginPage::class.java)
-        startActivity(intentRegis)
+    fun goToConfirmRegis(view: View) {
+        var intentConfirm = Intent(this, ConfirmRegis::class.java)
+        startActivity(intentConfirm)
     }
 }

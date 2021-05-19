@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/memes"
+        android:title="See Some Crazy Memes"
+        />
+    <item
+        android:id="@+id/Contact"
+        android:title="Contact"/>
+    <item
+        android:id="@+id/Calculate"
+        android:title="Try To Calculate"/>
+    <item
+        android:id="@+id/MediaPlayer"
+        android:title="Try To MediaPlayer"/>
+</menu>

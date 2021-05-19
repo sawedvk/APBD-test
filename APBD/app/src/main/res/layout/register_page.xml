@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/Register_Page"
     android:background="#06D6A0">
 
     <Button
@@ -14,15 +15,15 @@
         android:layout_marginBottom="52dp"
         android:backgroundTint="#FFE500"
         android:drawableTint="@color/white"
+        android:onClick="goToConfirmRegis"
         android:scrollbarThumbHorizontal="@color/white"
         android:scrollbarThumbVertical="@color/white"
         android:text="Register"
-        android:onClick="goToLogin"
         android:textColor="#000000"
         android:textColorHighlight="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/buttonRegisterGoogle"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:rippleColor="@color/white"
         tools:cornerRadius="12" />
