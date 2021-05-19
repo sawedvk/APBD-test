@@ -176,7 +176,8 @@ class Settings : AppCompatActivity() {
                 val availableBlocks = stat2.availableBlocks.toLong()
                 val format: String = Formatter.formatFileSize(this, availableBlocks * blockSize)
 
-                textView3.text = String.format("Available Memory: %s", format)
+                Toast.makeText(this, format ,Toast.LENGTH_SHORT).show()
+//                Toast.text = String.format("Available Memory: %s", format)
             }
         }
     }
