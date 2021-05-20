@@ -20,6 +20,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.app.TaskStackBuilder
+import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.home.*
 import kotlinx.android.synthetic.main.settings_page.*
 import java.io.File
@@ -71,67 +72,16 @@ class Settings : AppCompatActivity() {
 
     var mAlarmManager: AlarmManager?=null
     var mPendingIntent: PendingIntent?=null
-    private fun testSaveLocationExists(): Boolean {
-        val sDCardStatus = Environment.getExternalStorageState()
-        val status: Boolean
 
-        // If SD card is mounted
-        status = if (sDCardStatus == Environment.MEDIA_MOUNTED) {
-            true
-        } else {
-            false
-        }
-        return status
-    }
-    private fun getAvailableExternalMemorySize(): String? {
-        //panggil function yang mengecek apakah external memory terpasang
-        return if (testSaveLocationExists()) {
-            //tentukan path yaitu external storage
-            val path: File = Environment.getExternalStorageDirectory()
-            //fungsi StatFs akan membantu kita menjabarkan statistik atau keadaan saat ini dari path external storage yang kita berikan
-            val stat = StatFs(path.getPath())
-
-            //sebelum menentukan ukuran, kita harus telebih dahulu mencari tahu ukuran dari setiap block memory melalui stats yang telah didapat melalui fungsi StatFs
-            val blockSize: Long = stat.getBlockSizeLong()
-            //kita juga perlu tahu berapa block yang masih tersedia
-            val availableBlocks: Long = stat.getAvailableBlocksLong()
-
-            //untuk  mengetahui ukuran total , maka kita harus mengalikan jumlah block memory yang tersedia dengan ukuran setiap block
-            //dengan begitu kita akan mendapatkan ukuran total memory dalam satuan byte
-
-            formatSize(availableBlocks * blockSize)
-        } else {
-            ""
-        }
-
+    fun testSaveLocationExists(): Boolean {
+        return Environment.getExternalStorageState() == Environment.MEDIA_MOUNTED
     }
 
-
-    private fun formatSize(size: Long): String? {
-
-        var size = size
-        var suffix: String? = null
-        if (size >= 1024) {
-            suffix = " KB"
-            size /= 1024
-            if (size >= 1024) {
-                suffix = " MB"
-                size /= 1024
-            }
-        }
-        val resultBuffer =
-            StringBuilder(java.lang.Long.toString(size))
-        var commaOffset = resultBuffer.length - 3
-        while (commaOffset > 0) {
-            resultBuffer.insert(commaOffset, ',')
-            commaOffset -= 3
-        }
-        if (suffix != null) resultBuffer.append(suffix)
-        return resultBuffer.toString()
-
-        textView3.setText(resultBuffer)
-
+    fun Context.externalMemoryAvailable(): Boolean {
+        val storages = ContextCompat.getExternalFilesDirs(this, null)
+        return storages.size > 1 && storages[0] != null && storages[1] != null
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.settings_page)
@@ -139,11 +89,9 @@ class Settings : AppCompatActivity() {
         mAlarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
 
         createNotificationChannel()
-
         exportexcel.setOnClickListener {
             sendNotification()
         }
-
 
         button2.setOnClickListener{
             if(ButtonSaveSoundID != 0){
@@ -164,20 +112,14 @@ class Settings : AppCompatActivity() {
         }
 
         checkStorage.setOnClickListener {
-            if(testSaveLocationExists() == true)
-            {
-                val textView: TextView = findViewById(R.id.textView3)
-                val stat = StatFs(Environment.getExternalStorageDirectory().path)
-                val bytesAvailable = stat.blockSize.toLong() * stat.blockCount.toLong()
-                val megAvailable = bytesAvailable / 1048576
-                val path: File = Environment.getDataDirectory()
-                val stat2 = StatFs(path.path)
-                val blockSize = stat2.blockSize.toLong()
-                val availableBlocks = stat2.availableBlocks.toLong()
-                val format: String = Formatter.formatFileSize(this, availableBlocks * blockSize)
 
-                Toast.makeText(this, format ,Toast.LENGTH_SHORT).show()
-//                Toast.text = String.format("Available Memory: %s", format)
+            if (testSaveLocationExists()) {
+                val path: File = Environment.getDataDirectory()
+                val stat = StatFs(path.path)
+                val blockSize: Long = stat.blockSizeLong
+                val availableBlocks: Long = stat.availableBlocksLong
+                val format: String = Formatter.formatFileSize(this, (blockSize * availableBlocks) )
+                Toast.makeText(this, format, Toast.LENGTH_SHORT).show()
             }
         }
     }
