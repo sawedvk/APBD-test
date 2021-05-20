@@ -112,8 +112,7 @@ class Settings : AppCompatActivity() {
         }
 
         checkStorage.setOnClickListener {
-
-            if (Environment.MEDIA_MOUNTED == Environment.getExternalStorageState()) {
+            
                 val path: File = Environment.getDataDirectory()
                 val stat = StatFs(path.path)
                 val blockSize: Long = stat.blockSizeLong
@@ -121,7 +120,6 @@ class Settings : AppCompatActivity() {
                 val format: String = Formatter.formatFileSize(this, (blockSize * availableBlocks) )
                 Toast.makeText(this, format, Toast.LENGTH_SHORT).show()
             }
-        }
     }
 
     private  fun createNotificationChannel(){
