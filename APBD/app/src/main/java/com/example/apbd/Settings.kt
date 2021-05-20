@@ -113,7 +113,7 @@ class Settings : AppCompatActivity() {
 
         checkStorage.setOnClickListener {
 
-            if (testSaveLocationExists()) {
+            if (Environment.MEDIA_MOUNTED == Environment.getExternalStorageState()) {
                 val path: File = Environment.getDataDirectory()
                 val stat = StatFs(path.path)
                 val blockSize: Long = stat.blockSizeLong
