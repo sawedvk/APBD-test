@@ -1,22 +1,17 @@
 package com.example.apbd
 
-import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.Environment
-import android.os.StatFs
-import android.system.Os.write
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import kotlinx.android.synthetic.main.expense.*
 import kotlinx.android.synthetic.main.income.*
 import java.io.File
-import java.util.jar.Manifest
 
 class income : AppCompatActivity() {
 
@@ -28,6 +23,8 @@ class income : AppCompatActivity() {
         File(myDir, "${IncomeDescription.text}.txt").apply {
             writeText(IncomeAmount.text.toString())
         }
+
+
         IncomeAmount.text.clear()
     }
 

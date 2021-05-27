@@ -6,7 +6,6 @@ import com.example.apbd.data.Income
 
 @Dao
 interface IncomeDAO {
-
     @Insert
     fun insertData(vararg income :Income)
 

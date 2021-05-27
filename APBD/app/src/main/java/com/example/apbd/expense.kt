@@ -45,14 +45,11 @@ class expense : AppCompatActivity() {
                         else if (keyValArray[0]=="${::Amount.name}"){
                             Amount.setText(keyValArray[1])
                         }
-//                        edit_text1.setText("${edit_text1.text}\n$text")
                     }
                 }
             }
         } catch (e: FileNotFoundException) {
-//            edit_text1.setText("File Not Found")
         } catch (e: IOException) {
-//            edit_text1.setText("File Can't be Read")
         }
     }
 

@@ -9,6 +9,9 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.android.synthetic.main.activity_detail.*
+import kotlinx.android.synthetic.main.history.*
 import java.util.*
 
 class history : AppCompatActivity() {
@@ -17,10 +20,19 @@ class history : AppCompatActivity() {
     var mAlarmManager: AlarmManager?=null
     var mPendingIntent: PendingIntent?=null
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.history)
         mAlarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
+
+        button6.setOnClickListener {
+            var contactAdapter = incomeAdapter()
+            myRecycleView.apply {
+                layoutManager = LinearLayoutManager(this@history)
+                adapter = contactAdapter
+            }
+        }
     }
 
     fun goToIncome(view: View) {
