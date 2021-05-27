@@ -1,18 +1,26 @@
 package com.example.apbd
 
+import DatabaseStuffs.DB_Helper
 import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.activity_detail.*
+import androidx.room.Room
+import com.example.apbd.data.Income
 import kotlinx.android.synthetic.main.history.*
+import kotlinx.android.synthetic.main.income.*
+import org.jetbrains.anko.doAsync
+import org.jetbrains.anko.uiThread
 import java.util.*
+import kotlin.random.Random
 
 class history : AppCompatActivity() {
 
@@ -20,19 +28,57 @@ class history : AppCompatActivity() {
     var mAlarmManager: AlarmManager?=null
     var mPendingIntent: PendingIntent?=null
 
+    var db:DB_Helper?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.history)
         mAlarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
 
+        db = Room.databaseBuilder(
+            this,
+            DB_Helper::class.java,
+            "Income.db"
+        ).build()
+
         button6.setOnClickListener {
-            var contactAdapter = incomeAdapter()
-            myRecycleView.apply {
-                layoutManager = LinearLayoutManager(this@history)
-                adapter = contactAdapter
+            var result = ""
+            var list = arrayListOf<Income>()
+            doAsync {
+                var IncomeTMP = Income(Random.nextInt())
+                IncomeTMP.Date = editTextDate1.text.toString()
+                IncomeTMP.Desc = IncomeDescription.text.toString()
+                IncomeTMP.Amount = IncomeAmount.text.toString()
+                db!!.incomeDao().insertData(IncomeTMP)
+                uiThread {
+                    Toast.makeText(this@history, "Data Added", Toast.LENGTH_SHORT).show()
+                    Log.w("Hasil Testing", result)
+                }
+
             }
         }
+
+    }
+
+    override fun onStart() {
+        super.onStart()
+        getAllData()
+    }
+
+    fun getAllData(){
+        doAsync {
+            var result=db!!.incomeDao().getAll()
+            uiThread {
+                var incomeAdapter = IncomeAdapter(this@history, result)
+                RecyViewRoom.apply {
+                    layoutManager = LinearLayoutManager(this@history)
+                    adapter = incomeAdapter
+                }
+                Log.w("Hasil Testing", result.toString())
+            }
+
+        }
+
     }
 
     fun goToIncome(view: View) {

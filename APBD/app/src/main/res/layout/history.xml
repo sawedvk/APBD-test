@@ -270,6 +270,7 @@
         app:srcCompat="?attr/actionModeCloseDrawable" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyViewRoom"
         android:layout_width="411dp"
         android:layout_height="256dp"
         app:layout_constraintBottom_toTopOf="@+id/textView23"
