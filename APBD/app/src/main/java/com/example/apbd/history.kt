@@ -41,6 +41,7 @@ class history : AppCompatActivity() {
             "Income.db"
         ).build()
 
+
         button6.setOnClickListener {
             var result = ""
             var list = arrayListOf<Income>()

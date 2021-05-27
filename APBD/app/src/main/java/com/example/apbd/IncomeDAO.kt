@@ -3,6 +3,7 @@ package com.example.apbd
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
+import androidx.room.Update
 import com.example.apbd.data.Income
 
 @Dao
@@ -14,5 +15,8 @@ interface IncomeDAO {
 
     @Insert
     fun insertData(vararg income :Income)
+
+    @Update
+    fun update(income : Income)
 
 }

@@ -1,31 +1,23 @@
 package com.example.apbd
 
 import DatabaseStuffs.DB_Helper
-import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.Environment
-
-import android.os.StatFs
-import android.system.Os.write
 import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-
 import androidx.room.Room
 import com.example.apbd.data.Income
-import kotlinx.android.synthetic.main.expense.*
 import kotlinx.android.synthetic.main.income.*
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.uiThread
 import java.io.File
-
-import java.util.jar.Manifest
 import kotlin.random.Random
 
 
@@ -100,6 +92,16 @@ class income : AppCompatActivity() {
             "Income.db"
         ).build()
 
+        var id = intent.getStringExtra("Id")
+        var deskripsi =  intent.getStringExtra("Deskripsi")
+        var tanggal = intent.getStringExtra("Tanggal")
+        var nominal = intent.getStringExtra("Nominal")
+
+        editTextDate1.setText(tanggal)
+        IncomeDescription.setText(deskripsi)
+        IncomeAmount.setText(nominal)
+
+
         buttonSave.setOnClickListener {
             if (isExternalStorageReadable()) {
                 writeFileExternal()
@@ -112,24 +114,41 @@ class income : AppCompatActivity() {
             }
         }
 
-        buttonSave.setOnClickListener {
+        buttonSave3.setOnClickListener {
+            Log.w("Hasil Testing", id!!.toString())
             var result = ""
             doAsync {
-                var IncomeTMP = Income(Random.nextInt())
+                var IncomeTMP = Income(id!!.toInt())
                 IncomeTMP.Date = editTextDate1.text.toString()
                 IncomeTMP.Desc = IncomeDescription.text.toString()
                 IncomeTMP.Amount = IncomeAmount.text.toString()
-                db.incomeDao().insertData(IncomeTMP)
-                for (allData in db.incomeDao().getAll()) {
-                    result += "${allData.toString()}"
-                }
+                db.incomeDao().update(IncomeTMP)
+
                 uiThread {
+                    Toast.makeText(this@income, "Data Added", Toast.LENGTH_SHORT).show()
                     Log.w("Hasil Testing", result)
                 }
 
             }
 
 
+        }
+
+        buttonSave.setOnClickListener {
+            var result = ""
+            var list = arrayListOf<Income>()
+            doAsync {
+                var IncomeTMP = Income(Random.nextInt())
+                IncomeTMP.Date = editTextDate1.text.toString()
+                IncomeTMP.Desc = IncomeDescription.text.toString()
+                IncomeTMP.Amount = IncomeAmount.text.toString()
+                db!!.incomeDao().insertData(IncomeTMP)
+                uiThread {
+                    Toast.makeText(this@income, "Data Added", Toast.LENGTH_SHORT).show()
+                    Log.w("Hasil Testing", result)
+                }
+
+            }
         }
 
 
