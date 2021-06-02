@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.app2">
+    <permission android:name="com.example.apbd.provider.READ_URI_DB"/>
+    <uses-permission android:name="com.example.apbd.provider.READ_URI_DB"/>
 
     <application
         android:allowBackup="true"

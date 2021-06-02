@@ -40,6 +40,9 @@ class history : AppCompatActivity() {
             "Income.db"
         ).build()
 
+        button5.setOnClickListener {
+            viewAllData()
+        }
 
         button6.setOnClickListener {
             getAllData()

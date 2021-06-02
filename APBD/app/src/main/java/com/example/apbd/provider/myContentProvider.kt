@@ -5,6 +5,7 @@ import DatabaseStuffs.ExpDB_Helper
 import android.content.ContentProvider
 import android.content.ContentValues
 import android.database.Cursor
+import android.database.sqlite.SQLiteQueryBuilder
 import android.net.Uri
 
 class myContentProvider : ContentProvider(){
@@ -14,11 +15,21 @@ class myContentProvider : ContentProvider(){
         TODO("Not yet implemented")
     }
 
-    override fun query(uri: Uri, projection: Array<out String>?, selection: String?, selectionArgs: Array<out String>?, sortOrder: String?): Cursor? {
-        TODO("Not yet implemented")
+    override fun query(uri: Uri,
+                       projection: Array<out String>?,
+                       selection: String?,
+                       selectionArgs: Array<out String>?,
+                       sortOrder: String?): Cursor? {
+        var queryBuilder = SQLiteQueryBuilder()
+        queryBuilder.tables=ExpenseDB.expenseTable.TABLE_EXPENSE
+        var cursor : Cursor = queryBuilder.query(dbHelper?.readableDatabase,
+        projection,selection,selectionArgs,null,null,sortOrder)
+        cursor.setNotificationUri(context?.contentResolver,uri)
+        return  cursor
     }
 
     override fun onCreate(): Boolean {
+        dbHelper= ExpDB_Helper(context!!)
         return true
     }
 
@@ -38,7 +49,5 @@ class myContentProvider : ContentProvider(){
         var AUTHORITY = "com.example.apbd.provider.provider.myContentProvider"
         var EXPENSE_TABLE = ExpenseDB.expenseTable.TABLE_EXPENSE
         val CONTENT_URI = Uri.parse("content://$AUTHORITY/$EXPENSE_TABLE")
-
-
     }
 }

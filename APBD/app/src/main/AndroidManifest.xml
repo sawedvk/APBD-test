@@ -8,6 +8,8 @@
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <permission android:name="com.example.apbd.provider.READ_URI_DB"
+        android:protectionLevel="normal"/>
 
 
     <application
@@ -21,7 +23,9 @@
         <service
             android:name=".AudioPlayerService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true">
+            
+        </service>
 
         <activity android:name=".MediaPlayer" />
         <activity android:name=".calculate" />
@@ -86,6 +90,13 @@
         <activity android:name=".Regispage" />
         <activity android:name=".ConfirmRegis" />
         <activity android:name=".LoginPage" />
+        <provider
+            android:authorities="com.example.apbd.provider.provider.myContentProvider"
+            android:name=".provider.myContentProvider"
+            android:enabled="true"
+            android:exported="true"
+            android:readPermission="com.example.apbd.provider.READ_URI_DB"
+            android:grantUriPermissions="true"/>
     </application>
 
 </manifest>
