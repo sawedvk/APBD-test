@@ -1,14 +1,14 @@
 package com.example.apbd.provider
 
-import DBsource.Income_data
-import DatabaseStuffs.DB_Helper
+import DBsource.ExpenseDB
+import DatabaseStuffs.ExpDB_Helper
 import android.content.ContentProvider
 import android.content.ContentValues
 import android.database.Cursor
 import android.net.Uri
 
 class myContentProvider : ContentProvider(){
-    private  var dbHelper:DB_Helper?=null
+    private  var dbHelper:ExpDB_Helper?=null
 
     override fun insert(uri: Uri, values: ContentValues?): Uri? {
         TODO("Not yet implemented")
@@ -31,13 +31,13 @@ class myContentProvider : ContentProvider(){
     }
 
     override fun getType(uri: Uri): String? {
-
+        TODO("Not yet implemented")
     }
 
     companion object{
         var AUTHORITY = "com.example.apbd.provider.provider.myContentProvider"
-        var INCOME_TABLE = Income_data.IncomeTable.Table_Income
-        val CONTENT_URI = Uri.parse("content://$AUTHORITY/$INCOME_TABLE")
+        var EXPENSE_TABLE = ExpenseDB.expenseTable.TABLE_EXPENSE
+        val CONTENT_URI = Uri.parse("content://$AUTHORITY/$EXPENSE_TABLE")
 
 
     }
