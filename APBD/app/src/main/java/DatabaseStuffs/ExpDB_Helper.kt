@@ -71,5 +71,6 @@ class ExpDB_Helper(context: Context) : SQLiteOpenHelper(
         var selection = "${ExpenseDB.expenseTable.COLUMN_DESCRIPTION} = ?"
         var selectionArgs = arrayOf(desc)
         db.delete(ExpenseDB.expenseTable.TABLE_EXPENSE,selection,selectionArgs)
+
     }
 }

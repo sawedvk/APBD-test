@@ -67,6 +67,21 @@ class history : AppCompatActivity() {
 
     }
 
+    fun viewAllData(){
+        doAsync {
+            var result=mySQLitedb!!.viewAllExpense()
+            uiThread {
+                var expenseAdapter = ExpenseAdapter(this@history, result)
+                RecyViewRoom.apply {
+                    layoutManager = LinearLayoutManager(this@history)
+                    adapter = expenseAdapter
+                }
+                Log.w("Hasil Testing", result.toString())
+            }
+
+        }
+    }
+
     fun goToIncome(view: View) {
         var intentIncome = Intent(this, income::class.java)
         startActivity(intentIncome)
