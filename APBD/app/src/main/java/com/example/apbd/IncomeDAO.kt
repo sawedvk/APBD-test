@@ -1,9 +1,6 @@
 package com.example.apbd
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.Query
-import androidx.room.Update
+import androidx.room.*
 import com.example.apbd.data.Income
 
 @Dao
@@ -18,5 +15,18 @@ interface IncomeDAO {
 
     @Update
     fun update(income : Income)
-
+    
+    @Transaction
+    fun TransactionData(): List<Income> {
+        var transactionData = getAll()
+        return transactionData
+    }
+    @Transaction
+    fun insertTransactionData(income: Income){
+        insertData();
+    }
+    @Transaction
+    fun UpdateTransactionData(income: Income){
+        update(income);
+    }
 }

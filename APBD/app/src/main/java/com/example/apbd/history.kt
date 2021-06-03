@@ -68,7 +68,7 @@ class history : AppCompatActivity() {
 
     fun getAllData(){
         doAsync {
-            var result=db!!.incomeDao().getAll()
+            var result=db!!.incomeDao().TransactionData()
             uiThread {
                 var incomeAdapter = IncomeAdapter(this@history, result)
                 RecyViewRoom.apply {

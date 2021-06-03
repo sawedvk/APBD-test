@@ -122,7 +122,7 @@ class income : AppCompatActivity() {
                 IncomeTMP.Date = editTextDate1.text.toString()
                 IncomeTMP.Desc = IncomeDescription.text.toString()
                 IncomeTMP.Amount = IncomeAmount.text.toString()
-                db.incomeDao().update(IncomeTMP)
+                db.incomeDao().UpdateTransactionData(IncomeTMP)
 
                 uiThread {
                     Toast.makeText(this@income, "Data Added", Toast.LENGTH_SHORT).show()
@@ -142,7 +142,7 @@ class income : AppCompatActivity() {
                 IncomeTMP.Date = editTextDate1.text.toString()
                 IncomeTMP.Desc = IncomeDescription.text.toString()
                 IncomeTMP.Amount = IncomeAmount.text.toString()
-                db!!.incomeDao().insertData(IncomeTMP)
+                db!!.incomeDao().insertTransactionData(IncomeTMP)
                 uiThread {
                     Toast.makeText(this@income, "Data Added", Toast.LENGTH_SHORT).show()
                     Log.w("Hasil Testing", result)
