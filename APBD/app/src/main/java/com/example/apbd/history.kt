@@ -1,6 +1,7 @@
 package com.example.apbd
 
 import DatabaseStuffs.DB_Helper
+import DatabaseStuffs.ExpDB_Helper
 import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.Context
@@ -9,18 +10,14 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
-import com.example.apbd.data.Income
 import kotlinx.android.synthetic.main.history.*
-import kotlinx.android.synthetic.main.income.*
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.uiThread
 import java.util.*
-import kotlin.random.Random
 
 class history : AppCompatActivity() {
 
@@ -29,11 +26,13 @@ class history : AppCompatActivity() {
     var mPendingIntent: PendingIntent?=null
 
     var db:DB_Helper?=null
+    var mySQLitedb:ExpDB_Helper? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.history)
         mAlarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
+        mySQLitedb = ExpDB_Helper(this)
 
         db = Room.databaseBuilder(
             this,
@@ -41,30 +40,19 @@ class history : AppCompatActivity() {
             "Income.db"
         ).build()
 
+        button5.setOnClickListener {
+            viewAllData()
+        }
 
         button6.setOnClickListener {
-            var result = ""
-            var list = arrayListOf<Income>()
-            doAsync {
-                var IncomeTMP = Income(Random.nextInt())
-                IncomeTMP.Date = editTextDate1.text.toString()
-                IncomeTMP.Desc = IncomeDescription.text.toString()
-                IncomeTMP.Amount = IncomeAmount.text.toString()
-                db!!.incomeDao().insertData(IncomeTMP)
-                uiThread {
-                    Toast.makeText(this@history, "Data Added", Toast.LENGTH_SHORT).show()
-                    Log.w("Hasil Testing", result)
-                }
-
-            }
+            getAllData()
         }
 
     }
 
-    override fun onStart() {
-        super.onStart()
-        getAllData()
-    }
+//    override fun onStart() {
+//        super.onStart()
+//    }
 
     fun getAllData(){
         doAsync {
@@ -80,6 +68,21 @@ class history : AppCompatActivity() {
 
         }
 
+    }
+
+    fun viewAllData(){
+        doAsync {
+            var result=mySQLitedb!!.viewAllExpense()
+            uiThread {
+                var expenseAdapter = ExpenseAdapter(this@history, result)
+                RecyViewRoom.apply {
+                    layoutManager = LinearLayoutManager(this@history)
+                    adapter = expenseAdapter
+                }
+                Log.w("Hasil Testing", result.toString())
+            }
+
+        }
     }
 
     fun goToIncome(view: View) {

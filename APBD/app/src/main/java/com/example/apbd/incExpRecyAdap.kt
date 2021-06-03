@@ -49,3 +49,4 @@ class Holder(view: View) : RecyclerView.ViewHolder(view){
         nominal = view.findViewById(R.id.Nominal)
     }
 }
+

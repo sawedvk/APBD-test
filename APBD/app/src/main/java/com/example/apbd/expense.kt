@@ -1,5 +1,6 @@
 package com.example.apbd
 
+import DatabaseStuffs.ExpDB_Helper
 import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.Context
@@ -10,6 +11,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.example.apbd.data.ExpenseData
 import kotlinx.android.synthetic.main.expense.*
 import java.io.FileNotFoundException
 import java.io.IOException
@@ -18,6 +20,7 @@ class expense : AppCompatActivity() {
 
     var mAlarmManager:AlarmManager?=null
     var mPendingIntent:PendingIntent?=null
+    var mySQLitedb:ExpDB_Helper? = null
 
     override fun onDestroy() {
         super.onDestroy()
@@ -59,10 +62,41 @@ class expense : AppCompatActivity() {
 
         mAlarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
 
+        var id = intent.getStringExtra("Id")
+        var deskripsi =  intent.getStringExtra("Deskripsi")
+        var tanggal = intent.getStringExtra("Tanggal")
+        var nominal = intent.getStringExtra("Nominal")
+
+        editTextDate.setText(tanggal)
+        Description.setText(deskripsi)
+        Amount.setText(nominal)
+
         recovery.setOnClickListener {
             readFileInternal()
         }
+
+        button.setOnClickListener {
+            var ExpenseTmp = ExpenseData()
+            ExpenseTmp.date=editTextDate.text.toString()
+            ExpenseTmp.desc=Description.text.toString()
+            ExpenseTmp.amount=Amount.text.toString()
+            var result=mySQLitedb?.addExpense(ExpenseTmp)
+            if (result!=-1L){
+                Toast.makeText(this, "Data Added", Toast.LENGTH_SHORT).show()
+            }
+            else{
+                Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show()
+            }
+            editTextDate.text.clear()
+            Description.text.clear()
+            Amount.text.clear()
+        }
     }
+
+    fun updateAdapter(){
+
+    }
+
         fun goToHome(view: View) {
             var intenthome = Intent(this,Home::class.java)
             startActivity(intenthome)
