@@ -1,6 +1,7 @@
 package com.example.app2
 
 import android.content.Context
+import android.util.Log
 import com.example.app2.ExpenseDB.expenseTable.Companion.COLUMN_AMOUNT
 import com.example.app2.ExpenseDB.expenseTable.Companion.COLUMN_DATE
 import com.example.app2.ExpenseDB.expenseTable.Companion.COLUMN_DESCRIPTION
@@ -15,10 +16,14 @@ class expenseTransaction(context: Context){
         var cursor = myContentResolver.query(
             myContentProviderURI.CONTENT_URI, mProjection, null, null, null
         )
+        Log.i("cursortest",cursor.toString())
         if(cursor!=null){
+            Log.i("cursortest","aaaaa")
             var expenseDesc = ""
             if(cursor.moveToFirst()){
+                Log.i("cursortest","ye")
                 do{
+                    Log.i("cursortest","bbbbb")
                     expenseDesc = cursor.getString(cursor.getColumnIndex(COLUMN_DESCRIPTION))
                     myDataList.add(expenseDesc)
                 }while (cursor.moveToNext())

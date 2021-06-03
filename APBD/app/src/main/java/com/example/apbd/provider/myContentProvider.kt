@@ -7,6 +7,7 @@ import android.content.ContentValues
 import android.database.Cursor
 import android.database.sqlite.SQLiteQueryBuilder
 import android.net.Uri
+import android.util.Log
 
 class myContentProvider : ContentProvider(){
     private  var dbHelper:ExpDB_Helper?=null
@@ -25,6 +26,7 @@ class myContentProvider : ContentProvider(){
         var cursor : Cursor = queryBuilder.query(dbHelper?.readableDatabase,
         projection,selection,selectionArgs,null,null,sortOrder)
         cursor.setNotificationUri(context?.contentResolver,uri)
+        Log.i("cursortest",cursor.toString())
         return  cursor
     }
 
@@ -49,5 +51,7 @@ class myContentProvider : ContentProvider(){
         var AUTHORITY = "com.example.apbd.provider.provider.myContentProvider"
         var EXPENSE_TABLE = ExpenseDB.expenseTable.TABLE_EXPENSE
         val CONTENT_URI = Uri.parse("content://$AUTHORITY/$EXPENSE_TABLE")
+        var haiya = "pusing"
+
     }
 }

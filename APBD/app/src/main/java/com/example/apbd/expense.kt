@@ -61,6 +61,7 @@ class expense : AppCompatActivity() {
         setContentView(R.layout.expense)
 
         mAlarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
+        mySQLitedb = ExpDB_Helper(this)
 
         var id = intent.getStringExtra("Id")
         var deskripsi =  intent.getStringExtra("Deskripsi")

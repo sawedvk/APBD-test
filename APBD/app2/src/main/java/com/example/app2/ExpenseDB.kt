@@ -19,6 +19,6 @@ class myContentProviderURI{
     companion object{
         var AUTHORITY = "com.example.apbd.provider.provider.myContentProvider"
         var EXPENSE_TABLE = ExpenseDB.expenseTable.TABLE_EXPENSE
-        val CONTENT_URI = Uri.parse("content://$AUTHORITY/$EXPENSE_TABLE")
+        val CONTENT_URI : Uri = Uri.parse("content://$AUTHORITY/$EXPENSE_TABLE")
     }
 }
