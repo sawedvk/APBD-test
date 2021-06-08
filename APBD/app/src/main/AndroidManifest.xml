@@ -7,25 +7,34 @@
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <permission android:name="com.example.apbd.provider.READ_URI_DB"
-        android:protectionLevel="normal"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
+    <permission
+        android:name="com.example.apbd.provider.READ_URI_DB"
+        android:protectionLevel="normal" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:requestLegacyExternalStorage="true"
         android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.APBD">
+        <receiver android:name=".HistoryWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/history_widget_info" />
+        </receiver>
+
         <service
             android:name=".AudioPlayerService"
             android:enabled="true"
-            android:exported="true">
-            
-        </service>
+            android:exported="true"></service>
 
         <activity android:name=".MediaPlayer" />
         <activity android:name=".calculate" />
@@ -90,13 +99,14 @@
         <activity android:name=".Regispage" />
         <activity android:name=".ConfirmRegis" />
         <activity android:name=".LoginPage" />
+
         <provider
-            android:authorities="com.example.apbd.provider.provider.myContentProvider"
             android:name=".provider.myContentProvider"
+            android:authorities="com.example.apbd.provider.provider.myContentProvider"
             android:enabled="true"
             android:exported="true"
-            android:readPermission="com.example.apbd.provider.READ_URI_DB"
-            android:grantUriPermissions="true"/>
+            android:grantUriPermissions="true"
+            android:readPermission="com.example.apbd.provider.READ_URI_DB" />
     </application>
 
 </manifest>
