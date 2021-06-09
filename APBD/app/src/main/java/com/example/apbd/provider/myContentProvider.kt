@@ -51,7 +51,5 @@ class myContentProvider : ContentProvider(){
         var AUTHORITY = "com.example.apbd.provider.provider.myContentProvider"
         var EXPENSE_TABLE = ExpenseDB.expenseTable.TABLE_EXPENSE
         val CONTENT_URI = Uri.parse("content://$AUTHORITY/$EXPENSE_TABLE")
-        var haiya = "pusing"
-
     }
 }

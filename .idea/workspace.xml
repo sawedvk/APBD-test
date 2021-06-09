@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="c21a5718-10e3-4b59-a67f-45deda314a8b" name="Default Changelist" comment="" />
+    <list default="true" id="c21a5718-10e3-4b59-a67f-45deda314a8b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/APBD/app/src/main/java/com/example/apbd/provider/myContentProvider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/APBD/app/src/main/java/com/example/apbd/provider/myContentProvider.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apbd test.zip" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,7 +25,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/APBD" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -34,9 +44,13 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="580" y="187" key="FileChooserDialogImpl" timestamp="1616600720138">
+    <state x="280" y="7" key="#Project_Structure" timestamp="1623240168628">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state x="580" y="187" key="FileChooserDialogImpl/62.0.1474.864@62.0.1474.864" timestamp="1616600720138" />
+    <state x="280" y="7" key="#Project_Structure/62.0.1474.864@62.0.1474.864" timestamp="1623240168628" />
+    <state x="580" y="187" key="FileChooserDialogImpl" timestamp="1623240176519">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="580" y="187" key="FileChooserDialogImpl/62.0.1474.864@62.0.1474.864" timestamp="1623240176519" />
   </component>
 </project>
