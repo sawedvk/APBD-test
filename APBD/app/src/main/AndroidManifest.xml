@@ -21,14 +21,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.APBD">
+<<<<<<< HEAD
         <receiver android:name=".Test_History">
+=======
+        <receiver android:name=".HistoryWidget">
+>>>>>>> 3cf390ba6413e397256b2816066dbd2d10eec828
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
 
             <meta-data
                 android:name="android.appwidget.provider"
+<<<<<<< HEAD
                 android:resource="@xml/test__history_info" />
+=======
+                android:resource="@xml/history_widget_info" />
+>>>>>>> 3cf390ba6413e397256b2816066dbd2d10eec828
         </receiver>
 
         <service
