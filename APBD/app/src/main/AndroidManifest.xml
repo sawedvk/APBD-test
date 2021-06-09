@@ -21,7 +21,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.APBD">
-<<<<<<< HEAD
+
         <receiver android:name=".TransactionHistory">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -31,39 +31,26 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/transaction_history_info" />
         </receiver>
-        <receiver android:name=".Test_History">
-=======
-<<<<<<< HEAD
-        <receiver android:name=".Test_History">
-=======
+        <receiver android:name=".Test_History"/>
+
         <receiver android:name=".HistoryWidget">
->>>>>>> 3cf390ba6413e397256b2816066dbd2d10eec828
->>>>>>> da963f66a864ee63650089077af07adc24c865b8
+
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
 
             <meta-data
                 android:name="android.appwidget.provider"
-<<<<<<< HEAD
                 android:resource="@xml/test__history_info" />
-=======
-<<<<<<< HEAD
-                android:resource="@xml/test__history_info" />
-=======
-                android:resource="@xml/history_widget_info" />
->>>>>>> 3cf390ba6413e397256b2816066dbd2d10eec828
->>>>>>> da963f66a864ee63650089077af07adc24c865b8
         </receiver>
 
         <service
             android:name=".AudioPlayerService"
             android:enabled="true"
-<<<<<<< HEAD
-            android:exported="true" />
-=======
-            android:exported="true"></service>
->>>>>>> da963f66a864ee63650089077af07adc24c865b8
+            android:exported="true">
+
+        </service>
+
 
         <activity android:name=".MediaPlayer" />
         <activity android:name=".calculate" />
