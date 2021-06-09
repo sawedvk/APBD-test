@@ -1,20 +1,70 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#06D6A0"
+    android:background="?attr/appWidgetBackgroundColor"
     android:padding="@dimen/widget_margin"
     android:theme="@style/ThemeOverlay.APBD.AppWidgetContainer">
 
     <TextView
-        android:id="@+id/appwidget_text"
-        android:layout_width="117dp"
-        android:layout_height="43dp"
-        android:layout_gravity="center"
-        android:layout_marginLeft="150dp"
-        android:contentDescription="@string/appwidget_text"
-        android:text="@string/appwidget_text"
-        android:textAlignment="center"
-        android:textColor="?attr/appWidgetTextColor"
-        android:textSize="24sp"
-        android:textStyle="bold|italic" />
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:padding="5dp"
+        android:textSize="14dp"
+        android:text="Total Transaction"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/teal_200"
+        android:paddingLeft="5dp">
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Pengeluaran"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:text="Rp 310.000,-"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:textAlignment="center"/>
+
+            <Button
+                android:id="@+id/buttonExpense"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="EXPENSE"
+                android:textSize="14dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Pemasukan"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:text="Rp 1.000.000,-"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:textAlignment="center"/>
+
+            <Button
+                android:id="@+id/buttonIncome"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="INCOME"
+                android:textSize="14dp" />
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>
