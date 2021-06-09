@@ -1,282 +1,287 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:background="#06D6A0"-->
+<!--    tools:context=".LogoutPage">-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView14"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Export backup files to e-mail"-->
+<!--        android:textSize="18sp"-->
+<!--        tools:layout_editor_absoluteX="40dp"-->
+<!--        tools:layout_editor_absoluteY="459dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.498"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.56"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView15"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Settings"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:textSize="30sp"-->
+<!--        tools:layout_editor_absoluteX="150dp"-->
+<!--        tools:layout_editor_absoluteY="56dp"-->
+<!--        />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView16"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Account"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="24sp"-->
+<!--        tools:layout_editor_absoluteX="40dp"-->
+<!--        tools:layout_editor_absoluteY="120dp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView17"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Email"-->
+<!--        android:textSize="18sp"-->
+<!--        tools:layout_editor_absoluteX="40dp"-->
+<!--        tools:layout_editor_absoluteY="161dp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView18"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Currency"-->
+<!--        android:textSize="18sp"-->
+<!--        tools:layout_editor_absoluteX="40dp"-->
+<!--        tools:layout_editor_absoluteY="319dp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView19"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Export data to Excel"-->
+<!--        android:textSize="18sp"-->
+<!--        tools:layout_editor_absoluteX="40dp"-->
+<!--        tools:layout_editor_absoluteY="428dp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView20"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Language"-->
+<!--        android:textSize="18sp"-->
+<!--        tools:layout_editor_absoluteX="40dp"-->
+<!--        tools:layout_editor_absoluteY="353dp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView21"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Configuration"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="24sp"-->
+<!--        tools:layout_editor_absoluteX="40dp"-->
+<!--        tools:layout_editor_absoluteY="278dp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView22"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Backup"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="24sp"-->
+<!--        tools:layout_editor_absoluteX="40dp"-->
+<!--        tools:layout_editor_absoluteY="389dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button6"-->
+<!--        android:layout_width="93dp"-->
+<!--        android:layout_height="35dp"-->
+<!--        android:backgroundTint="#0006D6A0"-->
+<!--        android:text="Reset"-->
+<!--        android:textColor="#5C5C5C"-->
+<!--        tools:layout_editor_absoluteX="40dp"-->
+<!--        tools:layout_editor_absoluteY="493dp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView23"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Password"-->
+<!--        android:textSize="18sp"-->
+<!--        tools:layout_editor_absoluteX="40dp"-->
+<!--        tools:layout_editor_absoluteY="199dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button7"-->
+<!--        android:layout_width="146dp"-->
+<!--        android:layout_height="54dp"-->
+<!--        android:backgroundTint="#00FFFFFF"-->
+<!--        android:text="Save"-->
+<!--        android:textColor="@color/teal_200"-->
+<!--        tools:cornerRadius="12"-->
+<!--        tools:layout_editor_absoluteX="132dp"-->
+<!--        tools:layout_editor_absoluteY="567dp" />-->
+
+<!--    <Switch-->
+<!--        android:id="@+id/switch3"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        tools:layout_editor_absoluteX="349dp"-->
+<!--        tools:layout_editor_absoluteY="425dp" />-->
+
+<!--    <Switch-->
+<!--        android:id="@+id/switch4"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        tools:layout_editor_absoluteX="349dp"-->
+<!--        tools:layout_editor_absoluteY="459dp" />-->
+
+<!--    <com.google.android.material.bottomappbar.BottomAppBar-->
+<!--        android:id="@+id/bottomAppBar3"-->
+<!--        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"-->
+<!--        android:layout_width="414dp"-->
+<!--        android:layout_height="79dp"-->
+<!--        android:layout_gravity="bottom"-->
+<!--        app:backgroundTint="#26547C"-->
+<!--        tools:layout_editor_absoluteX="1dp"-->
+<!--        tools:layout_editor_absoluteY="654dp" />-->
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/imageButton6"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:backgroundTint="#00FFFFFF"-->
+<!--        app:srcCompat="@drawable/home_icon"-->
+<!--        tools:layout_editor_absoluteX="16dp"-->
+<!--        tools:layout_editor_absoluteY="665dp" />-->
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/imageButton7"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:backgroundTint="#00FFFFFF"-->
+<!--        app:srcCompat="@drawable/new_icon"-->
+<!--        tools:layout_editor_absoluteX="155dp"-->
+<!--        tools:layout_editor_absoluteY="660dp" />-->
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/imageButton8"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:backgroundTint="#00FFFFFF"-->
+<!--        app:srcCompat="@drawable/plan_icon"-->
+<!--        tools:layout_editor_absoluteX="84dp"-->
+<!--        tools:layout_editor_absoluteY="662dp" />-->
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/imageButton9"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:backgroundTint="#00FFFFFF"-->
+<!--        app:srcCompat="@drawable/settings_icon"-->
+<!--        tools:layout_editor_absoluteX="333dp"-->
+<!--        tools:layout_editor_absoluteY="660dp" />-->
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/imageButton10"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:backgroundTint="#00FFFFFF"-->
+<!--        app:srcCompat="@drawable/history_icon"-->
+<!--        tools:layout_editor_absoluteX="265dp"-->
+<!--        tools:layout_editor_absoluteY="662dp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView24"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="abc@gmail.com"-->
+<!--        tools:layout_editor_absoluteX="294dp"-->
+<!--        tools:layout_editor_absoluteY="166dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button25"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:backgroundTint="#00FFFFFF"-->
+<!--        android:text="change"-->
+<!--        tools:layout_editor_absoluteX="300dp"-->
+<!--        tools:layout_editor_absoluteY="187dp" />-->
+
+<!--    <Spinner-->
+<!--        android:id="@+id/spinnerCurrency3"-->
+<!--        android:layout_width="137dp"-->
+<!--        android:layout_height="33dp"-->
+<!--        android:backgroundTint="#FFFFFF"-->
+<!--        android:entries="@array/currency"-->
+<!--        android:spinnerMode="dropdown"-->
+<!--        tools:layout_editor_absoluteX="258dp"-->
+<!--        tools:layout_editor_absoluteY="310dp" />-->
+
+<!--    <Spinner-->
+<!--        android:id="@+id/spinnerCurrency4"-->
+<!--        android:layout_width="205dp"-->
+<!--        android:layout_height="33dp"-->
+<!--        android:backgroundTint="#FFFFFF"-->
+<!--        android:entries="@array/language"-->
+<!--        android:spinnerMode="dropdown"-->
+<!--        tools:layout_editor_absoluteX="190dp"-->
+<!--        tools:layout_editor_absoluteY="349dp" />-->
+
+<!--    <View-->
+<!--        android:id="@+id/viewAbu"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="#00FFFFFF"-->
+<!--        android:backgroundTint="#BE2C2C2C"-->
+<!--        tools:layout_editor_absoluteX="1dp"-->
+<!--        tools:layout_editor_absoluteY="0dp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/boxLogout"-->
+<!--        android:layout_width="357dp"-->
+<!--        android:layout_height="238dp"-->
+<!--        android:background="@drawable/box_notif"-->
+<!--        tools:layout_editor_absoluteX="27dp"-->
+<!--        tools:layout_editor_absoluteY="246dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button8"-->
+<!--        android:layout_width="145dp"-->
+<!--        android:layout_height="44dp"-->
+<!--        android:text="Cancel"-->
+<!--        tools:layout_editor_absoluteX="211dp"-->
+<!--        tools:layout_editor_absoluteY="397dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button5"-->
+<!--        android:layout_width="138dp"-->
+<!--        android:layout_height="44dp"-->
+<!--        android:backgroundTint="#FF3D3D"-->
+<!--        android:text="Logout"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        tools:layout_editor_absoluteX="56dp"-->
+<!--        tools:layout_editor_absoluteY="397dp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView25"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:fontFamily="sans-serif-black"-->
+<!--        android:text="Logout ?"-->
+<!--        android:textSize="36sp"-->
+<!--        tools:layout_editor_absoluteX="135dp"-->
+<!--        tools:layout_editor_absoluteY="310dp" />-->
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
-    android:background="#06D6A0"
-    tools:context=".LogoutPage">
+    android:layout_width="match_parent">
 
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Export backup files to e-mail"
-        android:textSize="18sp"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="459dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.56"/>
-
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Settings"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        tools:layout_editor_absoluteX="150dp"
-        tools:layout_editor_absoluteY="56dp"
-        />
-
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Account"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="120dp" />
-
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Email"
-        android:textSize="18sp"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="161dp" />
-
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Currency"
-        android:textSize="18sp"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="319dp" />
-
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Export data to Excel"
-        android:textSize="18sp"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="428dp" />
-
-    <TextView
-        android:id="@+id/textView20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Language"
-        android:textSize="18sp"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="353dp" />
-
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Configuration"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="278dp" />
-
-    <TextView
-        android:id="@+id/textView22"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Backup"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="389dp" />
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="93dp"
-        android:layout_height="35dp"
-        android:backgroundTint="#0006D6A0"
-        android:text="Reset"
-        android:textColor="#5C5C5C"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="493dp" />
-
-    <TextView
-        android:id="@+id/textView23"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Password"
-        android:textSize="18sp"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="199dp" />
-
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="146dp"
-        android:layout_height="54dp"
-        android:backgroundTint="#00FFFFFF"
-        android:text="Save"
-        android:textColor="@color/teal_200"
-        tools:cornerRadius="12"
-        tools:layout_editor_absoluteX="132dp"
-        tools:layout_editor_absoluteY="567dp" />
-
-    <Switch
-        android:id="@+id/switch3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="349dp"
-        tools:layout_editor_absoluteY="425dp" />
-
-    <Switch
-        android:id="@+id/switch4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="349dp"
-        tools:layout_editor_absoluteY="459dp" />
-
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/bottomAppBar3"
-        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
-        android:layout_width="414dp"
-        android:layout_height="79dp"
-        android:layout_gravity="bottom"
-        app:backgroundTint="#26547C"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="654dp" />
-
-    <ImageButton
-        android:id="@+id/imageButton6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#00FFFFFF"
-        app:srcCompat="@drawable/home_icon"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="665dp" />
-
-    <ImageButton
-        android:id="@+id/imageButton7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#00FFFFFF"
-        app:srcCompat="@drawable/new_icon"
-        tools:layout_editor_absoluteX="155dp"
-        tools:layout_editor_absoluteY="660dp" />
-
-    <ImageButton
-        android:id="@+id/imageButton8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#00FFFFFF"
-        app:srcCompat="@drawable/plan_icon"
-        tools:layout_editor_absoluteX="84dp"
-        tools:layout_editor_absoluteY="662dp" />
-
-    <ImageButton
-        android:id="@+id/imageButton9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#00FFFFFF"
-        app:srcCompat="@drawable/settings_icon"
-        tools:layout_editor_absoluteX="333dp"
-        tools:layout_editor_absoluteY="660dp" />
-
-    <ImageButton
-        android:id="@+id/imageButton10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#00FFFFFF"
-        app:srcCompat="@drawable/history_icon"
-        tools:layout_editor_absoluteX="265dp"
-        tools:layout_editor_absoluteY="662dp" />
-
-    <TextView
-        android:id="@+id/textView24"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="abc@gmail.com"
-        tools:layout_editor_absoluteX="294dp"
-        tools:layout_editor_absoluteY="166dp" />
-
-    <Button
-        android:id="@+id/button25"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#00FFFFFF"
-        android:text="change"
-        tools:layout_editor_absoluteX="300dp"
-        tools:layout_editor_absoluteY="187dp" />
-
-    <Spinner
-        android:id="@+id/spinnerCurrency3"
-        android:layout_width="137dp"
-        android:layout_height="33dp"
-        android:backgroundTint="#FFFFFF"
-        android:entries="@array/currency"
-        android:spinnerMode="dropdown"
-        tools:layout_editor_absoluteX="258dp"
-        tools:layout_editor_absoluteY="310dp" />
-
-    <Spinner
-        android:id="@+id/spinnerCurrency4"
-        android:layout_width="205dp"
-        android:layout_height="33dp"
-        android:backgroundTint="#FFFFFF"
-        android:entries="@array/language"
-        android:spinnerMode="dropdown"
-        tools:layout_editor_absoluteX="190dp"
-        tools:layout_editor_absoluteY="349dp" />
-
-    <view
-        android:id="@+id/viewAbu"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#00FFFFFF"
-        android:backgroundTint="#BE2C2C2C"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="16dp" />
-
-    <TextView
-        android:id="@+id/boxLogout"
-        android:layout_width="357dp"
-        android:layout_height="238dp"
-        android:background="@drawable/box_notif"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="246dp" />
-
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="145dp"
-        android:layout_height="44dp"
-        android:text="Cancel"
-        tools:layout_editor_absoluteX="211dp"
-        tools:layout_editor_absoluteY="397dp" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="138dp"
-        android:layout_height="44dp"
-        android:backgroundTint="#FF3D3D"
-        android:text="Logout"
-        android:textColor="#FFFFFF"
-        tools:layout_editor_absoluteX="56dp"
-        tools:layout_editor_absoluteY="397dp" />
-
-    <TextView
-        android:id="@+id/textView25"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-black"
-        android:text="Logout ?"
-        android:textSize="36sp"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="310dp" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

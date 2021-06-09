@@ -198,8 +198,8 @@
 
     <TextView
         android:id="@+id/total"
-        android:layout_width="45dp"
-        android:layout_height="23dp"
+        android:layout_width="80dp"
+        android:layout_height="27dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:gravity="center_horizontal|top"
