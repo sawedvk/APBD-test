@@ -1,5 +1,6 @@
 package com.example.apbd
 
+import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider
 import android.content.Context
@@ -43,6 +44,16 @@ class TransactionHistory : AppWidgetProvider() {
             // Construct the RemoteViews object
             val views = RemoteViews(context.packageName, R.layout.transaction_history)
             views.setTextViewText(R.id.appwidget_text, widgetText)
+
+            views.setOnClickPendingIntent(R.id.transcationHist,
+            PendingIntent.getActivity(context, 125 , Intent(context,history::class.java),0))
+
+
+            views.setOnClickPendingIntent(R.id.Pengeluaran,
+                PendingIntent.getActivity(context, 124 , Intent(context,expense::class.java),0))
+
+            views.setOnClickPendingIntent(R.id.Pemasukan,
+                PendingIntent.getActivity(context, 123 , Intent(context,income::class.java),0))
 
             // Instruct the widget manager to update the widget
             appWidgetManager.updateAppWidget(appWidgetId, views)
