@@ -3,7 +3,7 @@ package com.example.apbd
 import android.content.Context
 import android.content.SharedPreferences
 
-class SharedPref(val context: Context, val itemDetails : String) {
+class SharedPref(val context: Context, val itemDetails: String) {
     val Item_Name = "Product"
     val Item_Date = "Date"
     val Item_Harga ="Price"

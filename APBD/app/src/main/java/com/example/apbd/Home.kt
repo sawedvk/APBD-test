@@ -3,6 +3,8 @@ package com.example.apbd
 
 import android.app.AlarmManager
 import android.app.PendingIntent
+import android.appwidget.AppWidgetManager
+import android.content.ComponentName
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
@@ -18,6 +20,7 @@ import java.util.*
 
 class Home : AppCompatActivity() {
     val sharestuff = SharedPref(this, "itemData")
+    private lateinit var mySharedPrefWidget: SharedPrefWidget
 
     var mAlarmManager: AlarmManager?=null
     var mPendingIntent: PendingIntent?=null
@@ -30,6 +33,8 @@ class Home : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home)
+
+        mySharedPrefWidget = SharedPrefWidget(this)
 
         Gotohome.setOnClickListener {
             var intenthome = Intent(this,Home::class.java)
@@ -47,6 +52,14 @@ class Home : AppCompatActivity() {
         item_Name.text = sharestuff.getProduct()
         item_Price.text = sharestuff.getPrice().toString()
 
+        mySharedPrefWidget.nama = item_Name.text.toString()
+        mySharedPrefWidget.tanggal = item_Date.text.toString()
+        mySharedPrefWidget.harga = item_Price.text.toString()
+        var appWidgetManager = AppWidgetManager.getInstance(this)
+        var ids : IntArray = appWidgetManager.getAppWidgetIds(ComponentName(this,SharedPrefWidget::class.java))
+        var updateIntent = Intent(AppWidgetManager.ACTION_APPWIDGET_UPDATE)
+        updateIntent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS,ids)
+        sendBroadcast(updateIntent)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
