@@ -46,14 +46,13 @@ class TransactionHistory : AppWidgetProvider() {
             views.setTextViewText(R.id.appwidget_text, widgetText)
 
             views.setOnClickPendingIntent(R.id.transcationHist,
-            PendingIntent.getActivity(context, 125 , Intent(context,history::class.java),0))
+            PendingIntent.getActivity(context, 125 , Intent(context,history::class.java),PendingIntent.FLAG_UPDATE_CURRENT))
 
+            views.setOnClickPendingIntent(R.id.buttonExpense,
+                PendingIntent.getActivity(context, 124 , Intent(context,expense::class.java),PendingIntent.FLAG_UPDATE_CURRENT ))
 
-            views.setOnClickPendingIntent(R.id.Pengeluaran,
-                PendingIntent.getActivity(context, 124 , Intent(context,expense::class.java),0))
-
-            views.setOnClickPendingIntent(R.id.Pemasukan,
-                PendingIntent.getActivity(context, 123 , Intent(context,income::class.java),0))
+            views.setOnClickPendingIntent(R.id.buttonIncome,
+                PendingIntent.getActivity(context, 123 , Intent(context,income::class.java),PendingIntent.FLAG_UPDATE_CURRENT))
 
             // Instruct the widget manager to update the widget
             appWidgetManager.updateAppWidget(appWidgetId, views)
