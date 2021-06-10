@@ -88,6 +88,12 @@ class expense : AppCompatActivity() {
             else{
                 Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show()
             }
+            val sharestuff = SharedPref(this, "itemData")
+
+            sharestuff.setDate(editTextDate.text.toString())
+            sharestuff.setProduct(Description.text.toString())
+            sharestuff.setPrice(Amount.text.toString().toInt())
+
             editTextDate.text.clear()
             Description.text.clear()
             Amount.text.clear()

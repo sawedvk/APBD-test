@@ -303,19 +303,20 @@
 
     <TextView
         android:id="@+id/item_Name"
-        android:layout_width="75dp"
+        android:layout_width="111dp"
         android:layout_height="17dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:gravity="center_horizontal|top"
         android:text="@string/food"
+        android:textAlignment="viewStart"
         android:textAppearance="@style/netflix"
         app:layout_constraintBottom_toBottomOf="@+id/group_3"
         app:layout_constraintEnd_toEndOf="@+id/group_3"
-        app:layout_constraintHorizontal_bias="0.249"
+        app:layout_constraintHorizontal_bias="0.323"
         app:layout_constraintStart_toStartOf="@+id/group_3"
         app:layout_constraintTop_toTopOf="@+id/group_3"
-        app:layout_constraintVertical_bias="0.192" />
+        app:layout_constraintVertical_bias="0.206" />
 
     <TextView
         android:id="@+id/item_Date"
