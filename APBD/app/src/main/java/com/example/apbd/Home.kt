@@ -55,6 +55,7 @@ class Home : AppCompatActivity() {
         mySharedPrefWidget.nama = item_Name.text.toString()
         mySharedPrefWidget.tanggal = item_Date.text.toString()
         mySharedPrefWidget.harga = item_Price.text.toString()
+
         var appWidgetManager = AppWidgetManager.getInstance(this)
         var ids : IntArray = appWidgetManager.getAppWidgetIds(ComponentName(this,SharedPrefWidget::class.java))
         var updateIntent = Intent(AppWidgetManager.ACTION_APPWIDGET_UPDATE)
