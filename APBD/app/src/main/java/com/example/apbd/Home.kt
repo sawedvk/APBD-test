@@ -13,12 +13,12 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.gms.ads.AdListener
-import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.MobileAds
-import kotlinx.android.synthetic.main.activity_banner_ads.*
+import com.google.android.gms.ads.*
+import com.google.android.gms.ads.interstitial.InterstitialAd
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.home.*
 import kotlinx.android.synthetic.main.home.expense
@@ -31,6 +31,8 @@ class Home : AppCompatActivity() {
 
     var mAlarmManager: AlarmManager?=null
     var mPendingIntent: PendingIntent?=null
+
+    private var mInterAds : InterstitialAd? = null
 
 //    fun goToHome1(view: View) {
 //        var intenthome = Intent(this,Home::class.java)
@@ -48,12 +50,26 @@ class Home : AppCompatActivity() {
 
         }
 
+        InterstitialAd.load(this, "ca-app-pub-3940256099942544/1033173712",
+        AdRequest.Builder().build(), object : InterstitialAdLoadCallback(){
+                override fun onAdFailedToLoad(p0: LoadAdError) {
+                    Toast.makeText(this@Home, "Ads Load Failed", Toast.LENGTH_SHORT).show()
+                    mInterAds = null
+                }
+
+                override fun onAdLoaded(p0: InterstitialAd) {
+                    super.onAdLoaded(p0)
+                    mInterAds = p0
+                }
+
+            })
+
         mySharedPrefWidget = SharedPrefWidget(this)
 
-        Gotohome.setOnClickListener {
-            var intenthome = Intent(this,Home::class.java)
-            startActivity(intenthome)
-        }
+//        Gotohome.setOnClickListener {
+//            var intenthome = Intent(this,Home::class.java)
+//            startActivity(intenthome)
+//        }
 
         Log.i("HOME","HomeCreated")
 
@@ -108,7 +124,11 @@ class Home : AppCompatActivity() {
         return true
     }
 
-
+    fun showInterstitial(view: View) {
+        if (mInterAds!=null){
+            mInterAds?.show(this)
+        }
+    }
 
     fun goToIncome(view: View) {
         var intentIncome = Intent(this, income::class.java)

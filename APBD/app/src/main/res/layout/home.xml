@@ -422,7 +422,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.976"
-        app:srcCompat="@drawable/dashboard" />
+        app:srcCompat="@drawable/dashboard"
+        android:onClick="showInterstitial"/>
 
     <ImageView
         android:id="@+id/imageView3"
@@ -440,7 +441,7 @@
         android:onClick="alertKonfirmasi"/>
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/GoToSettings"
         android:layout_width="30dp"
         android:layout_height="40dp"
         android:layout_alignParentEnd="true"
@@ -452,7 +453,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.963"
         app:srcCompat="@drawable/settings"
-        android:onClick="goToSettings"/>
+        android:onClick="goToSettings" />
 
 
     <!-- Group 5 -->
