@@ -15,7 +15,14 @@ import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.gms.ads.AdListener
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.MobileAds
+import kotlinx.android.synthetic.main.activity_banner_ads.*
+import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.home.*
+import kotlinx.android.synthetic.main.home.expense
+import kotlinx.android.synthetic.main.home.income
 import java.util.*
 
 class Home : AppCompatActivity() {
@@ -33,6 +40,13 @@ class Home : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home)
+
+        MobileAds.initialize(this){}
+
+        adView2.loadAd(AdRequest.Builder().build())
+        adView2.adListener = object : AdListener(){
+
+        }
 
         mySharedPrefWidget = SharedPrefWidget(this)
 
@@ -60,6 +74,10 @@ class Home : AppCompatActivity() {
         var updateIntent = Intent(AppWidgetManager.ACTION_APPWIDGET_UPDATE)
         updateIntent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS,ids)
         sendBroadcast(updateIntent)
+    }
+
+    override fun onResume() {
+        super.onResume()
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

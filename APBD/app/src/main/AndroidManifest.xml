@@ -21,6 +21,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.APBD">
+        <activity android:name=".BannerAds"></activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-9143461782729450~2472558747" />
 
         <receiver android:name=".TransactionHistory">
             <intent-filter>
@@ -31,10 +36,8 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/transaction_history_info" />
         </receiver>
-        <receiver android:name=".Test_History"/>
-
+        <receiver android:name=".Test_History" />
         <receiver android:name=".HistoryWidget">
-
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -47,10 +50,7 @@
         <service
             android:name=".AudioPlayerService"
             android:enabled="true"
-            android:exported="true">
-
-        </service>
-
+            android:exported="true"></service>
 
         <activity android:name=".MediaPlayer" />
         <activity android:name=".calculate" />
