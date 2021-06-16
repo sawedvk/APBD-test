@@ -15,6 +15,7 @@ import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isInvisible
 import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.MobileAds
@@ -32,10 +33,19 @@ class Home : AppCompatActivity() {
     var mAlarmManager: AlarmManager?=null
     var mPendingIntent: PendingIntent?=null
 
+
+
 //    fun goToHome1(view: View) {
 //        var intenthome = Intent(this,Home::class.java)
 //        startActivity(intenthome)
 //    }
+    fun showHideads(view: View){
+        adView2.visibility = if(view.visibility == View.VISIBLE){
+            View.INVISIBLE
+        }else{
+            View.VISIBLE
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,7 +55,6 @@ class Home : AppCompatActivity() {
 
         adView2.loadAd(AdRequest.Builder().build())
         adView2.adListener = object : AdListener(){
-
         }
 
         mySharedPrefWidget = SharedPrefWidget(this)
