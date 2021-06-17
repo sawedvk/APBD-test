@@ -52,6 +52,14 @@ class Settings : AppCompatActivity() {
         ButtonCancelSoundID = sp?.load(this, R.raw.sound2,1) ?: 0
     }
 
+    override fun onResume() {
+        super.onResume()
+
+        if (PercobaanAds.mInterAds!=null){
+            PercobaanAds.mInterAds?.show(this)
+        }
+    }
+
     override fun onStop() {
         super.onStop()
         sp?.release()

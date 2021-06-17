@@ -70,6 +70,7 @@ class Home : AppCompatActivity() {
                 override fun onAdLoaded(p0: InterstitialAd) {
                     super.onAdLoaded(p0)
                     mInterAds = p0
+                    PercobaanAds.mInterAds = p0
                 }
 
             })
