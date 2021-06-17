@@ -8,6 +8,22 @@
     tools:context=".Home"
     >
 
+    <Button
+        android:id="@+id/removeAds"
+        android:layout_width="146dp"
+        android:layout_height="54dp"
+        android:backgroundTint="#FFFFFF"
+        android:onClick="showHideads"
+        android:text="Remove Ads"
+        android:textColor="@color/teal_200"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.862"
+        tools:cornerRadius="12" />
+
     <TextView
         android:id="@+id/hai_name_"
         android:layout_width="230dp"
@@ -553,18 +569,7 @@
         ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
         />
 
-    <Button
-        android:id="@+id/adTest"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Test"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.836"
-        android:onClick="showHideads"
-        />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

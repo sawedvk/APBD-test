@@ -16,17 +16,17 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-<<<<<<< HEAD
+
 import androidx.core.view.isInvisible
 import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.MobileAds
 import kotlinx.android.synthetic.main.activity_banner_ads.*
-=======
+
 import com.google.android.gms.ads.*
 import com.google.android.gms.ads.interstitial.InterstitialAd
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
->>>>>>> a39a82d46e0a774ec35210c60ca578f04887bd13
+
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.home.*
 import kotlinx.android.synthetic.main.home.expense
@@ -40,23 +40,15 @@ class Home : AppCompatActivity() {
     var mAlarmManager: AlarmManager?=null
     var mPendingIntent: PendingIntent?=null
 
-<<<<<<< HEAD
 
-=======
     private var mInterAds : InterstitialAd? = null
->>>>>>> a39a82d46e0a774ec35210c60ca578f04887bd13
+
 
 //    fun goToHome1(view: View) {
 //        var intenthome = Intent(this,Home::class.java)
 //        startActivity(intenthome)
 //    }
-    fun showHideads(view: View){
-        adView2.visibility = if(view.visibility == View.VISIBLE){
-            View.INVISIBLE
-        }else{
-            View.VISIBLE
-        }
-    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -109,6 +101,14 @@ class Home : AppCompatActivity() {
         var updateIntent = Intent(AppWidgetManager.ACTION_APPWIDGET_UPDATE)
         updateIntent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS,ids)
         sendBroadcast(updateIntent)
+    }
+    fun showHideads(view: View){
+        mInterAds = null
+        adView2.visibility = if (view.visibility == View.VISIBLE) {
+            View.INVISIBLE
+        } else {
+            View.VISIBLE
+        }
     }
 
     override fun onResume() {

@@ -197,6 +197,18 @@ class Settings : AppCompatActivity() {
         }
     }
 
+    fun showHideads(view: View){
+        var intenthome = Intent(this,Home::class.java)
+            startActivity(intenthome)
+        
+
+//        adView2.visibility = if(view.visibility == View.VISIBLE){
+//            View.INVISIBLE
+//        }else{
+//            View.VISIBLE
+//        }
+    }
+
     fun goToBootUp(view: View) {
         var intentbootup = Intent(this,MainActivity::class.java)
         startActivity(intentbootup)
