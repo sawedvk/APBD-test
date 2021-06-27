@@ -48,6 +48,7 @@ dependencies {
 
 
     implementation 'com.google.android.gms:play-services-ads:20.1.0'
+    implementation 'com.google.firebase:firebase-database-ktx'
 
     def room_version ="2.3.0"
     implementation platform('com.google.firebase:firebase-bom:28.1.0')
@@ -61,7 +62,6 @@ dependencies {
     implementation "androidx.room:room-runtime:$room_version"
     kapt "androidx.room:room-compiler:$room_version"
     implementation 'org.jetbrains.anko:anko-common:0.9'
-
     testImplementation 'junit:junit:4.+'
     testImplementation 'org.mockito:mockito-inline:3.3.0'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

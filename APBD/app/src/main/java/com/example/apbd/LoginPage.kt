@@ -3,7 +3,9 @@
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
+import android.text.TextUtils
 import android.text.TextWatcher
+import android.util.Patterns
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -43,10 +45,17 @@ import kotlinx.android.synthetic.main.login_page.*
 
 
         buttonRegisterGoogle2.setOnClickListener {
-            var Intent2Home = Intent(this, Home::class.java)
-            var usr=User(editTextTextEmailAddress.text.toString(), editTextTextPassword.text.toString())
-            Intent2Home.putExtra(EXTRA_USER,usr)
-            startActivity(Intent2Home)
+            if (TextUtils.isEmpty(editTextTextEmailAddress.text.toString()) ) {
+                Toast.makeText(this, "Please Enter your credentials!", Toast.LENGTH_SHORT).show()
+            }else {
+                var Intent2Home = Intent(this, Home::class.java)
+                var usr = User(
+                    editTextTextEmailAddress.text.toString(),
+                    editTextTextPassword.text.toString()
+                )
+                Intent2Home.putExtra(EXTRA_USER, usr)
+                startActivity(Intent2Home)
+            }
         }
 
     }
