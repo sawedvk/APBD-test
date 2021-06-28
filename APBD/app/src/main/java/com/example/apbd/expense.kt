@@ -72,23 +72,26 @@ class expense : AppCompatActivity() {
         var tanggal = intent.getStringExtra("Tanggal")
         var nominal = intent.getStringExtra("Nominal")
 
-        val c = Calendar.getInstance()
-        val year = c.get(Calendar.YEAR)
-        val month = c.get(Calendar.MONTH)
-        val day = c.get(Calendar.DAY_OF_MONTH)
 
-        editTextDate1.setOnClickListener {
-            val picker = DatePickerDialog(this, DatePickerDialog.OnDateSetListener{ view: DatePicker?, mYear: Int, mMont: Int, Mday: Int ->
-                editTextDate1.setText(""+Mday+"/"+mMont+"/"+mYear)
-            },year ,month, day)
-            picker.show()
-        }
+
         editTextDate.setText(tanggal)
         Description.setText(deskripsi)
         Amount.setText(nominal)
 
         recovery.setOnClickListener {
             readFileInternal()
+        }
+
+        val c = Calendar.getInstance()
+        val year = c.get(Calendar.YEAR)
+        val month = c.get(Calendar.MONTH)
+        val day = c.get(Calendar.DAY_OF_MONTH)
+
+        editTextDate.setOnClickListener {
+            val picker = DatePickerDialog(this, DatePickerDialog.OnDateSetListener{ view: DatePicker?, mYear: Int, mMont: Int, Mday: Int ->
+                editTextDate.setText(""+Mday+"/"+mMont+"/"+mYear)
+            },year ,month, day)
+            picker.show()
         }
 
         button.setOnClickListener {
