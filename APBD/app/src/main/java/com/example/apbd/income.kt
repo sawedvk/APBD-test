@@ -1,6 +1,7 @@
     package com.example.apbd
 
 import DatabaseStuffs.DB_Helper
+import android.app.DatePickerDialog
 import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -8,6 +9,7 @@ import android.os.Bundle
 import android.os.Environment
 import android.util.Log
 import android.view.View
+import android.widget.DatePicker
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -18,6 +20,7 @@ import kotlinx.android.synthetic.main.income.*
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.uiThread
 import java.io.File
+import java.util.*
 import kotlin.random.Random
 
 
@@ -92,6 +95,20 @@ class income : AppCompatActivity() {
             "Income.db"
         ).build()
 
+        val c = Calendar.getInstance()
+        val year = c.get(Calendar.YEAR)
+        val month = c.get(Calendar.MONTH)
+        val day = c.get(Calendar.DAY_OF_MONTH)
+
+        editTextDate1.setOnClickListener {
+            val picker = DatePickerDialog(this, DatePickerDialog.OnDateSetListener{view: DatePicker?, mYear: Int, mMont: Int, Mday: Int ->
+                editTextDate1.setText(""+Mday+"/"+mMont+"/"+mYear)
+            },year ,month, day)
+            picker.show()
+        }
+
+
+
         var id = intent.getStringExtra("Id")
         var deskripsi =  intent.getStringExtra("Deskripsi")
         var tanggal = intent.getStringExtra("Tanggal")
@@ -150,6 +167,7 @@ class income : AppCompatActivity() {
 
             }
         }
+
 
 
         fun goToHome(view: View) {

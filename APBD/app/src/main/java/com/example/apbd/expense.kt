@@ -2,19 +2,23 @@ package com.example.apbd
 
 import DatabaseStuffs.ExpDB_Helper
 import android.app.AlarmManager
+import android.app.DatePickerDialog
 import android.app.PendingIntent
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.DatePicker
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.apbd.data.ExpenseData
 import kotlinx.android.synthetic.main.expense.*
+import kotlinx.android.synthetic.main.income.*
 import java.io.FileNotFoundException
 import java.io.IOException
+import java.util.*
 
 class expense : AppCompatActivity() {
 
@@ -68,6 +72,17 @@ class expense : AppCompatActivity() {
         var tanggal = intent.getStringExtra("Tanggal")
         var nominal = intent.getStringExtra("Nominal")
 
+        val c = Calendar.getInstance()
+        val year = c.get(Calendar.YEAR)
+        val month = c.get(Calendar.MONTH)
+        val day = c.get(Calendar.DAY_OF_MONTH)
+
+        editTextDate1.setOnClickListener {
+            val picker = DatePickerDialog(this, DatePickerDialog.OnDateSetListener{ view: DatePicker?, mYear: Int, mMont: Int, Mday: Int ->
+                editTextDate1.setText(""+Mday+"/"+mMont+"/"+mYear)
+            },year ,month, day)
+            picker.show()
+        }
         editTextDate.setText(tanggal)
         Description.setText(deskripsi)
         Amount.setText(nominal)
