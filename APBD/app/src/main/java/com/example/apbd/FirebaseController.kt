@@ -15,7 +15,7 @@ class FirebaseController (context: Context) {
 
         ref.child(userId).setValue(userData).apply {
             addOnCompleteListener {
-                Toast.makeText(MContext,"Data saved", Toast.LENGTH_SHORT).show()
+                Toast.makeText(MContext,"Register Success", Toast.LENGTH_SHORT).show()
             }
             addOnFailureListener {
                 Toast.makeText(MContext, "${it.message}", Toast.LENGTH_SHORT).show()
